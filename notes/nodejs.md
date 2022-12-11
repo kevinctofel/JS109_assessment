@@ -1,15 +1,9 @@
 ---
-id: nodejs
+id: tm0bc08i4v42pdt22jlk12x
 title: Nodejs
 desc: ''
-updated: 1670725669199
-created: 1670725669199
-isDir: false
-id_imported: tm0bc08i4v42pdt22jlk12x
-title_imported: Nodejs
-desc_imported: ''
-updated_imported: 1669687742445
-created_imported: 1669687226671
+updated: 1669687742445
+created: 1669687226671
 ---
 
 ## What is Node.js?

@@ -1,20 +1,14 @@
 ---
-id: javascript
+id: 4ap1j0kdhfd938d6omjnrby
 title: JavaScript
 desc: ''
-updated: 1670725669198
-created: 1670725669198
-isDir: false
-id_imported: 4ap1j0kdhfd938d6omjnrby
-title_imported: JavaScript
-desc_imported: ''
-updated_imported: 1669766709707
-created_imported: 1669688199784
+updated: 1669766709707
+created: 1669688199784
 ---
 
 Created in 1995 by Brendan Eich at Netscape.
 
-[[nodejs]] was created by Ryan Dahl after Google developed the Chrome V8 JavaScript engine in 2008.
+[[Nodejs]] was created by Ryan Dahl after Google developed the Chrome V8 JavaScript engine in 2008.
 
 ## References:
 

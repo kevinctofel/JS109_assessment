@@ -1,15 +1,9 @@
 ---
-id: root
+id: a9k6wbiqd7ihnwo2cwduopd
 title: Root
 desc: ''
-updated: 1670725669200
-created: 1670725669200
-isDir: false
-id_imported: a9k6wbiqd7ihnwo2cwduopd
-title_imported: Root
-desc_imported: ''
-updated_imported: 1670613986591
-created_imported: 1670613986591
+updated: 1670613986591
+created: 1670613986591
 ---
 # Welcome to Dendron
 
