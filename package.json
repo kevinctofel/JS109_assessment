@@ -1,15 +1,23 @@
 {
   "name": "js109_assessment",
   "version": "1.0.0",
-  "description": "",
+  "description": "JS109 assessment notes for Launch School",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Kevin C. Tofel",
   "license": "ISC",
   "dependencies": {
     "@dendronhq/dendron-cli": "^0.119.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinctofel/JS109_assessment.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kevinctofel/JS109_assessment/issues"
+  },
+  "homepage": "https://github.com/kevinctofel/JS109_assessment#readme"
 }
