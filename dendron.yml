@@ -89,7 +89,7 @@ publishing:
     copyAssets: true
     siteHierarchies:
         - root
-    siteUrl: kevinctofel.github.io
+    siteUrl: https://kevinctofel.github.io
     writeStubs: false
     siteRootDir: docs
     seo:
