@@ -10,7 +10,8 @@
   "author": "Kevin C. Tofel",
   "license": "ISC",
   "dependencies": {
-    "@dendronhq/dendron-cli": "^0.119.0"
+    "@dendronhq/dendron-cli": "^0.119.0",
+    "readline-sync": "^1.4.10"
   },
   "repository": {
     "type": "git",
