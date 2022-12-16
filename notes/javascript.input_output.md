@@ -2,7 +2,7 @@
 id: 20gkaimzxfkx7m9sf2601rz
 title: Input / Output
 desc: ''
-updated: 1671215809203
+updated: 1671218650306
 created: 1671214899847
 ---
 ## Input and output in JavaScript
@@ -29,3 +29,12 @@ let name = rlSync.question("What's your name?\n");
 console.log(`Good Morning, ${name}!`);
 ```
 Note that ```question()``` returns string data, so when working with numbers, these must be coerced to the ```Number``` data type.
+
+### Browser input (basic)
+Include a JS script in the HTML. In the script, use the ```prompt``` function for a user input popup box. Input can be stored as a variable and used elsewhere in the script.
+
+```js
+let name = prompt("What's your name?");
+console.log(`Good Morning, ${name}`);
+```
+This data can be sent to the console via ```console.log()``` or through the ```alert``` function in the browser.
