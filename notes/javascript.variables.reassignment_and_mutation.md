@@ -2,7 +2,7 @@
 id: bwqhdi1jid9jlk5o6gbyafb
 title: Reassignment and mutation
 desc: ''
-updated: 1671557288303
+updated: 1671558324976
 created: 1671556958029
 ---
 ## Reassignment and mutation in JavaScript
@@ -31,4 +31,21 @@ obj.a = 42;  // Reassignment of object property, but NOT the variable
 arr = 42;                 // Reassignment; array is lost
 obj = { b: 1, c: 2 }      // Reassignment: now refers to a different object
 ```
+
+## Mutating the caller
+Example of a non-mutating method, where the stored value of ```name``` remains unchanged:
+```js
+let name = "Pete Hanson";
+console.log(name.toUpperCase()); // => 'PETE HANSON'
+console.log(name);               // => 'Pete Hanson'
+```
+```toUpperCase()``` returns a new value but leaves the original value as is.
+
+In contrast, the ```pop``` method mutates an array (the caller) and is therefore destructive:
+```js
+let oddNumbers = [1, 3, 5, 7, 9];
+oddNumbers.pop();
+console.log(oddNumbers); // => [1, 3, 5, 7]
+```
+Note that primitive values are immutable so their values never change; where they point to in memory can change, however. 
 
