@@ -2,7 +2,7 @@
 id: mdy04wr8e2d19zfwp01y27n
 title: Functions
 desc: ''
-updated: 1671219646225
+updated: 1671556832769
 created: 1671218755744
 ---
 ## Functions in JavaScript
@@ -57,5 +57,13 @@ say();        // => hello!
 ```
 
 ### Nested functions
+Functions can be nested within other functions. Once the inner function completes, it and all of its local data, is destroyed.
 
+### Function scope
+Global variables are available to all code in a program, so any function has access to them. Functions can modify global variables.
+
+Local variables defined inside of a function are only accessible within that function.
+
+### Functions vs. methods
+Functions pass arguments within their parenthesis. So too do methods, but methods are pre-defined functions on objects so you have to call a method on an object using the period.
 
