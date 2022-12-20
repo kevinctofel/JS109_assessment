@@ -1,8 +1,8 @@
 ---
 id: jt34t1o0ubmypsvupcjomky
-title: Data_types
+# title: Data Types
 desc: ''
-updated: 1669843743785
+updated: 1671557358008
 created: 1669837963465
 ---
 ## Data types in JavaScript
