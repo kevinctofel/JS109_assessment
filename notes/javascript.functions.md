@@ -2,7 +2,7 @@
 id: mdy04wr8e2d19zfwp01y27n
 title: Functions
 desc: ''
-updated: 1671556832769
+updated: 1671558761981
 created: 1671218755744
 ---
 ## Functions in JavaScript
@@ -67,3 +67,19 @@ Local variables defined inside of a function are only accessible within that fun
 ### Functions vs. methods
 Functions pass arguments within their parenthesis. So too do methods, but methods are pre-defined functions on objects so you have to call a method on an object using the period.
 
+## Function composition
+JavaScript lets a function call as an argument to another function via function composition. This is because function calls always return a value.
+
+Examples of passing a function call as an argument to the ```console.log()``` function:
+```js
+console.log(add(20, 45)); // => 65
+console.log(subtract(80, 10)); // => 70
+```
+
+## Defining a function (three ways)
+1. Create a function declaration and call the function.
+2. Create a function expression by setting a variable name equal to a function declaration.
+3. Use an arrow function, which is similar to option 2 but more concise. Arrow functions have implicit returns so you don't  need a ```return``` statement for a single expression. Example:
+```js
+let add = (a, b) => a + b; // this returns the value of a + b
+```
