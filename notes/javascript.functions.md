@@ -2,7 +2,7 @@
 id: mdy04wr8e2d19zfwp01y27n
 title: Functions
 desc: ''
-updated: 1671558761981
+updated: 1672333409190
 created: 1671218755744
 ---
 ## Functions in JavaScript
@@ -83,3 +83,7 @@ console.log(subtract(80, 10)); // => 70
 ```js
 let add = (a, b) => a + b; // this returns the value of a + b
 ```
+Note that function expressions are saved to a variable so they can't be invoked before definition.
+
+## First-class functions
+All JavaScript functions are considered to be objects so they can be assigned to variables, passed as arguments and returned from function calls.

@@ -2,7 +2,7 @@
 id: bwqhdi1jid9jlk5o6gbyafb
 title: Reassignment and mutation
 desc: ''
-updated: 1671558324976
+updated: 1672333204186
 created: 1671556958029
 ---
 ## Reassignment and mutation in JavaScript
@@ -48,4 +48,17 @@ oddNumbers.pop();
 console.log(oddNumbers); // => [1, 3, 5, 7]
 ```
 Note that primitive values are immutable so their values never change; where they point to in memory can change, however. 
+
+Functions can (but don't always) mutate arguments as well, although this applies only to global variables. Example:
+```js
+function changeFirstElement(array) {
+  array[0] = 9;
+}
+
+let oneToFive = [1, 2, 3, 4, 5];
+changeFirstElement(oneToFive);
+console.log(oneToFive); // => [9, 2, 3, 4, 5]
+```
+## Key concept of mutation
+Primitive values are immutable. That means their values never change; operations on immutable values always return new values. Operations on mutable values (arrays and objects) may or may not return a new value and may or may not mutate data.
 
