@@ -2,7 +2,7 @@
 id: ra0p20kuodsnuloxagh1cke
 title: Flow control
 desc: ''
-updated: 1673048863328
+updated: 1673049256493
 created: 1673047707671
 ---
 ## Flow Control in JavaScript
@@ -29,3 +29,7 @@ Comparisons return the boolean values of ```true``` or ```false``` depending on 
 |```!==```| Strict inequality of value and type; returns ```false``` if they are the same|
 | ```==``` | Non-strict or loose equality. Attempts to coerce types of one or both operands. Returns ```true``` if values but not type are the same.|
 |```!=```| Non-strict or loose inequality. Attempt to coerce types of one or both operands. Returns ```false``` if values are the same, regardless of type.|
+| ```<``` | Less than returns ```true``` when left operand value is less than the right operand value|
+|```>``` | Greater than returns ```true``` when right operand value is greater than left operand value|
+|```<=``` | Less than or equal to returns ```true``` when left operand value is less than or equal to the right operand value|
+|```>=```| Greater than or equal to returns ```true``` when the left operand value is greater than or equal to the right operand value|
