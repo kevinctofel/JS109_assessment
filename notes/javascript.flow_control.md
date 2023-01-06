@@ -2,7 +2,7 @@
 id: ra0p20kuodsnuloxagh1cke
 title: Flow control
 desc: ''
-updated: 1673048106646
+updated: 1673048863328
 created: 1673047707671
 ---
 ## Flow Control in JavaScript
@@ -21,3 +21,11 @@ if (x === 3) {                  // If statement
 Note in above example, the curly braces for the code block aren't needed. A single statement or expression doesn't require them but it's good practice.
 
 ### Comparisons
+Comparisons return the boolean values of ```true``` or ```false``` depending on the condition and the operands.
+
+| Operator | Description
+|---|---|
+|```===```| Strict equality of value and type ; returns ```true``` if they are the same |
+|```!==```| Strict inequality of value and type; returns ```false``` if they are the same|
+| ```==``` | Non-strict or loose equality. Attempts to coerce types of one or both operands. Returns ```true``` if values but not type are the same.|
+|```!=```| Non-strict or loose inequality. Attempt to coerce types of one or both operands. Returns ```false``` if values are the same, regardless of type.|
