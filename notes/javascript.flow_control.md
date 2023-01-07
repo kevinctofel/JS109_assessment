@@ -2,7 +2,7 @@
 id: ra0p20kuodsnuloxagh1cke
 title: Flow control
 desc: ''
-updated: 1673049256493
+updated: 1673050482177
 created: 1673047707671
 ---
 ## Flow Control in JavaScript
@@ -33,3 +33,9 @@ Comparisons return the boolean values of ```true``` or ```false``` depending on 
 |```>``` | Greater than returns ```true``` when right operand value is greater than left operand value|
 |```<=``` | Less than or equal to returns ```true``` when left operand value is less than or equal to the right operand value|
 |```>=```| Greater than or equal to returns ```true``` when the left operand value is greater than or equal to the right operand value|
+| ```!```| Logical not operator, negates an operand|
+|```&&```| Logical and operator, returns ```true``` only if both operands are true|
+|&#124&#124| Logical or operator, returns ```true``` if either operand is true|
+
+
+### Short circuits
