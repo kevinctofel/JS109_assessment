@@ -1,0 +1,11 @@
+<h1 id="call-stack">Call Stack<a aria-hidden="true" class="anchor-heading icon-link" href="#call-stack"></a></h1>
+<h2 id="the-call-stack-in-javascript">The Call Stack in JavaScript<a aria-hidden="true" class="anchor-heading icon-link" href="#the-call-stack-in-javascript"></a></h2>
+<p>This stack tracks what function is executing and what other functions haven't yet executed. It's an ordered stack (LIFO) of functions as they're invoked or called. The stack is created with stack frames; one frame for each function invocation.</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Glossary/Call_stack">From the MDN</a>:</p>
+<ul>
+<li>When a script calls a function, the interpreter adds it to the call stack and then starts carrying out the function.</li>
+<li>Any functions that are called by that function are added to the call stack further up, and run where their calls are reached.</li>
+<li>When the current function is finished, the interpreter takes it off the stack and resumes execution where it left off in the last code listing.</li>
+<li>If the stack takes up more space than it was assigned, a "stack overflow" error is thrown.</li>
+</ul>
+<p><img src="/JS109_assessment/assets/images/2022-12-29-12-09-33.png"></p>

@@ -1,0 +1,36 @@
+<h1 id="coercion">Coercion<a aria-hidden="true" class="anchor-heading icon-link" href="#coercion"></a></h1>
+<h2 id="explicit-coercion">Explicit Coercion<a aria-hidden="true" class="anchor-heading icon-link" href="#explicit-coercion"></a></h2>
+<p>If we want to change a data type, such as a string of numbers to a Number type, we perform an explicity type coercion.</p>
+<ul>
+<li>String to Numbers</li>
+</ul>
+<p>Use the Number function to coerce a string to a number:</p>
+<pre class="language-js"><code class="language-js"><span class="token operator">></span> <span class="token known-class-name class-name">Number</span><span class="token punctuation">(</span><span class="token string">'1'</span><span class="token punctuation">)</span>
+<span class="token operator">=</span> <span class="token number">1</span>
+</code></pre>
+<p>The Number function accepts a string value argument, returning a number if the string is comprised of valid numeric data. If the string doesn't have valid numeric data, Number() will return NaN</p>
+<ul>
+<li>parseInt() function alternative</li>
+</ul>
+<p>Similar to the Number() function for coercion but works with a mix of string data comprised of numbers and non-numeric characters. It will convert string numbers until it reaches an invalid character.</p>
+<pre class="language-js"><code class="language-js"><span class="token operator">></span> <span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token string">'12xyz'</span><span class="token punctuation">)</span>
+<span class="token operator">=</span> <span class="token number">12</span>
+</code></pre>
+<p>Note that if you pass a fractional character to parseInt() it will only return the integer value, not any decimal values less than 1.</p>
+<pre class="language-js"><code class="language-js"><span class="token operator">></span> <span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token string">'3.1415'</span><span class="token punctuation">)</span>
+<span class="token operator">=</span> <span class="token number">3</span>
+</code></pre>
+<ul>
+<li>parseFloat() alternative</li>
+</ul>
+<p>However, the parseFloat() function will handle fractional numbers for explicit coercion.</p>
+<pre class="language-js"><code class="language-js"><span class="token operator">></span> <span class="token function">parseFloat</span><span class="token punctuation">(</span><span class="token string">'12.5foo'</span><span class="token punctuation">)</span>
+<span class="token operator">=</span> <span class="token number">12.5</span>
+</code></pre>
+<ul>
+<li>Numbers to strings</li>
+</ul>
+<p>To explicity coerce numbers into a string data type, use the String() function.</p>
+<pre class="language-js"><code class="language-js"><span class="token operator">></span> <span class="token known-class-name class-name">String</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span>
+<span class="token operator">=</span> <span class="token string">'20'</span>
+</code></pre>

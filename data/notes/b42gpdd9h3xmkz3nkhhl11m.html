@@ -1,0 +1,30 @@
+<h1 id="nan">NaN<a aria-hidden="true" class="anchor-heading icon-link" href="#nan"></a></h1>
+<h2 id="nan-in-javascript">NaN in JavaScript<a aria-hidden="true" class="anchor-heading icon-link" href="#nan-in-javascript"></a></h2>
+<p>NaN is a value that represents "Not a Number". </p>
+<p>Generally found in an illegal operation on numbers or trying to perform an operation on non-numeric data types.</p>
+<p>It is of type Number:</p>
+<pre class="language-js"><code class="language-js"><span class="token operator">></span> <span class="token keyword">typeof</span> <span class="token number">NaN</span>
+<span class="token operator">=</span> <span class="token string">'number'</span>
+</code></pre>
+<p>NaN is common when:</p>
+<ul>
+<li>Trying to divide by zero</li>
+<li>Find the square root of negative number</li>
+<li>Trying to convert a non-number value to a number</li>
+</ul>
+<p>NaN is the only JavaScript value not equal to itself. </p>
+<pre class="language-js"><code class="language-js"><span class="token operator">></span> <span class="token keyword">let</span> value <span class="token operator">=</span> <span class="token number">NaN</span><span class="token punctuation">;</span>
+<span class="token operator">></span> value <span class="token operator">===</span> <span class="token number">NaN</span>         <span class="token comment">// We'll talk about this in a few minutes</span>
+<span class="token operator">=</span> <span class="token boolean">false</span>
+
+<span class="token operator">></span> <span class="token number">NaN</span> <span class="token operator">===</span> <span class="token number">NaN</span>
+<span class="token operator">=</span> <span class="token boolean">false</span>
+</code></pre>
+<p>To determine if a value is NaN, use one of the two following methods:</p>
+<pre class="language-js"><code class="language-js"><span class="token operator">></span> <span class="token keyword">let</span> value <span class="token operator">=</span> <span class="token number">NaN</span><span class="token punctuation">;</span>
+<span class="token operator">></span> <span class="token known-class-name class-name">Number</span><span class="token punctuation">.</span><span class="token method function property-access">isNaN</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span>
+<span class="token operator">=</span> <span class="token boolean">true</span>
+
+<span class="token operator">></span> <span class="token known-class-name class-name">Object</span><span class="token punctuation">.</span><span class="token method function property-access">is</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span> <span class="token number">NaN</span><span class="token punctuation">)</span>
+<span class="token operator">=</span> <span class="token boolean">true</span>
+</code></pre>

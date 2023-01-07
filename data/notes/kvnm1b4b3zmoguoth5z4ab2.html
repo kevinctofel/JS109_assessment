@@ -1,0 +1,9 @@
+<h1 id="instance_vs_static">Instance_vs_static<a aria-hidden="true" class="anchor-heading icon-link" href="#instance_vs_static"></a></h1>
+<h2 id="instance-vs-static-methods">Instance vs Static Methods<a aria-hidden="true" class="anchor-heading icon-link" href="#instance-vs-static-methods"></a></h2>
+<p>Instance methods have <code>.prototype.</code> in their name.</p>
+<p>Instance methods are applied to a value type from the constuctor. Example:</p>
+<p><code>String.prototype.concat('abc')</code></p>
+<p>However, there is also a static concat method that can be applied to any string value. Example:</p>
+<p><code>'The first letters of the alphabet are: '.concat('abc')</code></p>
+<p>Instance methods are called on an instance of an object.
+Static methods are called on the constructor of an object.</p>

@@ -1,0 +1,68 @@
+<h1 id="flow-control">Flow control<a aria-hidden="true" class="anchor-heading icon-link" href="#flow-control"></a></h1>
+<h2 id="flow-control-in-javascript">Flow Control in JavaScript<a aria-hidden="true" class="anchor-heading icon-link" href="#flow-control-in-javascript"></a></h2>
+<p>How a program branches off to do different things based on inputs, outputs, etc...</p>
+<h3 id="conditionals">Conditionals<a aria-hidden="true" class="anchor-heading icon-link" href="#conditionals"></a></h3>
+<p>Checking "if" something is or happens changes the path or flow of code.</p>
+<p>Simplest method is with <code>if</code> statements, which can also be followed by <code>else</code> conditions.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>x <span class="token operator">===</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>                  <span class="token comment">// If statement</span>
+  <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">"x is 3"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment">// Clause to run</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Note in above example, the curly braces for the code block aren't needed. A single statement or expression doesn't require them but it's good practice.</p>
+<h3 id="comparisons">Comparisons<a aria-hidden="true" class="anchor-heading icon-link" href="#comparisons"></a></h3>
+<p>Comparisons return the boolean values of <code>true</code> or <code>false</code> depending on the condition and the operands.</p>
+<div class="table-responsive">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Operator</th><th>Description</th></tr></thead><tbody><tr><td><code>===</code></td><td>Strict equality of value and type ; returns <code>true</code> if they are the same</td></tr><tr><td><code>!==</code></td><td>Strict inequality of value and type; returns <code>false</code> if they are the same</td></tr><tr><td><code>==</code></td><td>Non-strict or loose equality. Attempts to coerce types of one or both operands. Returns <code>true</code> if values but not type are the same.</td></tr><tr><td><code>!=</code></td><td>Non-strict or loose inequality. Attempt to coerce types of one or both operands. Returns <code>false</code> if values are the same, regardless of type.</td></tr><tr><td><code>&#x3C;</code></td><td>Less than returns <code>true</code> when left operand value is less than the right operand value</td></tr><tr><td><code>></code></td><td>Greater than returns <code>true</code> when right operand value is greater than left operand value</td></tr><tr><td><code>&#x3C;=</code></td><td>Less than or equal to returns <code>true</code> when left operand value is less than or equal to the right operand value</td></tr><tr><td><code>>=</code></td><td>Greater than or equal to returns <code>true</code> when the left operand value is greater than or equal to the right operand value</td></tr><tr><td><code>!</code></td><td>Logical not operator, negates an operand</td></tr><tr><td><code>&#x26;&#x26;</code></td><td>Logical and operator, returns <code>true</code> only if both operands are true</td></tr><tr><td>||</td><td>Logical or operator, returns <code>true</code> if either operand is true</td></tr></tbody></table></div>
+<h3 id="short-circuits">Short circuits<a aria-hidden="true" class="anchor-heading icon-link" href="#short-circuits"></a></h3>

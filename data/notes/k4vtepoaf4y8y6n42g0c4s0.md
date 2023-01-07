@@ -1,0 +1,3 @@
+```javascript
+rm filename.js
+```

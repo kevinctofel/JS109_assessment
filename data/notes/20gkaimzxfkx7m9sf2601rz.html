@@ -1,0 +1,27 @@
+<h1 id="input--output">Input / Output<a aria-hidden="true" class="anchor-heading icon-link" href="#input--output"></a></h1>
+<h2 id="input-and-output-in-javascript">Input and output in JavaScript<a aria-hidden="true" class="anchor-heading icon-link" href="#input-and-output-in-javascript"></a></h2>
+<h3 id="command-line-output">Command line output<a aria-hidden="true" class="anchor-heading icon-link" href="#command-line-output"></a></h3>
+<p><code>console.log()</code> provides command line output shown in the Terminal and in the console of a browser's dev tools.</p>
+<h3 id="command-line-input">Command line input<a aria-hidden="true" class="anchor-heading icon-link" href="#command-line-input"></a></h3>
+<p>Accepting user input requires a Node.js API called <code>readline</code>. For our purposes, we use a library called <code>readlineSync</code> <a href="https://www.npmjs.com/package/readline-sync">available through NPM</a>.</p>
+<p>How to install readline-sync: </p>
+<pre class="language-js"><code class="language-js">$ npm install readline<span class="token operator">-</span>sync <span class="token operator">--</span>save
+npm notice created a lockfile <span class="token keyword module">as</span> <span class="token keyword">package</span><span class="token operator">-</span>lock<span class="token punctuation">.</span>
+</code></pre>
+<p>How to use readlineSync:</p>
+<ul>
+<li>Use the <code>require</code> function to import the readline-sync library.</li>
+<li>Assign that function to a variable for later use.</li>
+<li>Use that variable with the readline-sync methods: <code>question()</code>, <code>prompt()</code>, etc..</li>
+</ul>
+<pre class="language-js"><code class="language-js"><span class="token keyword">let</span> rlSync <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'readline-sync'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> name <span class="token operator">=</span> rlSync<span class="token punctuation">.</span><span class="token method function property-access">question</span><span class="token punctuation">(</span><span class="token string">"What's your name?\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Good Morning, </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">!</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Note that <code>question()</code> returns string data, so when working with numbers, these must be coerced to the <code>Number</code> data type.</p>
+<h3 id="browser-input-basic">Browser input (basic)<a aria-hidden="true" class="anchor-heading icon-link" href="#browser-input-basic"></a></h3>
+<p>Include a JS script in the HTML. In the script, use the <code>prompt</code> function for a user input popup box. Input can be stored as a variable and used elsewhere in the script.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">let</span> name <span class="token operator">=</span> <span class="token function">prompt</span><span class="token punctuation">(</span><span class="token string">"What's your name?"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Good Morning, </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>This data can be sent to the console via <code>console.log()</code> or through the <code>alert</code> function in the browser.</p>

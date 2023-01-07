@@ -1,0 +1,6 @@
+<h1 id="constants">Constants<a aria-hidden="true" class="anchor-heading icon-link" href="#constants"></a></h1>
+<p>'const' is similar to 'let' but is for constant values that are immutable. They can't be assigned a new value.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token constant">INTEREST_RATE</span> <span class="token operator">=</span> <span class="token number">0.0783</span><span class="token punctuation">;</span>
+<span class="token constant">INTEREST_RATE</span> <span class="token operator">=</span> <span class="token number">0.0788</span><span class="token punctuation">;</span> <span class="token comment">// Uncaught TypeError: Assignment to constant variable.</span>
+</code></pre>
+<p>You can't simply declare a constant value; you have to initialize it, or assign, it a value at the same time.</p>
