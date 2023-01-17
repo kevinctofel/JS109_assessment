@@ -2,7 +2,7 @@
 id: ra0p20kuodsnuloxagh1cke
 title: Flow control
 desc: ''
-updated: 1673050482177
+updated: 1673921214826
 created: 1673047707671
 ---
 ## Flow Control in JavaScript
@@ -39,3 +39,85 @@ Comparisons return the boolean values of ```true``` or ```false``` depending on 
 
 
 ### Short circuits
+Logical operators use short circuit evaluation so they can re-flow code sooner (or not at all) based on just the first operand.
+
+In an ```&&``` evaluation, if the first operand returns ```false```, the second doesn't have to be evaluated.
+
+In an ```||``` evaluation, if the first operand returns ```true```, the second doesn't have to be evaluated.
+
+### Truthiness
+```If``` statements always evaluated to ```true``` or ```false```. But expressions can be evaluated for truthiness by JavaScript coercion, where the expression value is changed to represent true or false.
+
+Examples: 
+```js
+a = 5
+if (a) {
+  console.log("how can this be true?");
+} else {
+  console.log("it is not true");
+}
+
+b = 0
+if (b) {
+  console.log("how can this be true?");
+} else {
+  console.log("it is not true");
+}
+```
+The first statement is truthy because the value of ```a``` is coerced to ```true```.
+The second statement is not truthy, or falsy, because the value of ```b``` is coerced to ```false```.
+
+Why? JavaScript coerces the following values to ```false```:
+- false
+- The numbers 0, -0, and 0n
+- ```''```; an empty string
+- undefined
+- null
+- NaN
+
+All other values are coerced to ```true``` in JavaScript.
+
+With ```&&``` and ```||```, truthy and falsy can still short circuit, returning the value of the last evaluated operand.
+Rather than test expressions with these with multiple code lines, use a ternary expression for clarity.
+Example:
+```js
+// Instead of this:
+let foo = null;
+let bar = 'qux';
+let isOk = foo || bar;
+
+// Use a ternary expression like this:
+let isOk = (foo || bar) ? true : false;
+```
+
+### Operator precedence
+From highest to lowest: 
+- <=, <, >, >= - Comparison
+- ===, !==, ==, != - Equality
+- && - Logical AND
+- || - Logical OR
+Note: expressions in parenthesis take precedence over those that are not.
+
+### The ternary operator
+Uses a combination of ```?```, ```:``` after the expression, with the truthy and falsy return values inserted.
+Example:
+```js
+> 1 == 1 ? 'this is true' : 'this is not true'
+= 'this is true'
+
+> 1 == 0 ? "this is true" : "this is not true"
+= 'this is not true'
+```
+Why use a ternary expression over an ```if/else``` statement? Because it's a single expression and can be treated as value that can be stored, passed in as an argument, etc...
+
+Ternary expressions should be used to select between two values, not two actions. It's good practice to assign the value of a ternary expression to a variable or passed as an argument.
+Example:
+```js
+let foo = hitchhiker ? 42 : 3.1415;    // Assign result of ?: to a variable
+console.log(hitchhiker ? 42 : 3.1415); // Pass result as argument
+return hitchhiker ? 42: 3.1415;        // Return result
+```
+
+### Switch statements
+
+
