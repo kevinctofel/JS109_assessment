@@ -2,7 +2,7 @@
 id: ra0p20kuodsnuloxagh1cke
 title: Flow control
 desc: ''
-updated: 1673921214826
+updated: 1673921653500
 created: 1673047707671
 ---
 ## Flow Control in JavaScript
@@ -119,5 +119,45 @@ return hitchhiker ? 42: 3.1415;        // Return result
 ```
 
 ### Switch statements
+Similar to an ```if``` statement but compares a single value against multiple values for strict equality. It evaluates the expression to the value in each ```case``` clause. The ```break``` statements effectively short circuit the ```switch``` statement by dropping out when the evaluation is truthy.
+Example:
+```js
+let a = 5;
 
+switch (a) {
+  case 5:
+    console.log('a is 5');
+    break;
+  case 6:
+    console.log('a is 6');
+    break;
+  default:
+    console.log('a is neither 5, nor 6');
+    break;
+} // => a is 5
+```
+
+```Switch``` statements can fall through multiple values that satisfy strict equality, like an ```||``` operator. 
+Example:
+```js
+let a = 5;
+
+switch (a) {
+  case 5:
+  case 6:
+  case 7:
+    // executed if a is 5, 6, or 7
+    console.log("a is either 5, 6, or 7");
+    break;
+  case 8:
+  case 9:
+    // executed if a is 8 or 9
+    console.log('a is 8 or 9');
+    break;
+  default:
+    // executed if a is anything else
+    console.log('a is not 5, 6, 7, 8, or 9');
+    break;
+}
+```
 
