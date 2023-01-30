@@ -2,14 +2,14 @@
 id: b2fbgyy39kk05enfzoipron
 title: Arrays
 desc: ''
-updated: 1670615738521
+updated: 1675040935798
 created: 1670276602270
 ---
 ## Arrays in JavaScript
 
-Arrays are ordered lists that can contain any data type. Array literals are represented by square brackets [] wit comma delimted values, aka: elements.
+Arrays are ordered lists that can contain any data type. Array literals are represented by square brackets [] with comma delimited values, aka: elements.
 
-Example of an arry of numbers:
+Example of an array of numbers:
 ```js
 > [1, 2, 3, 4, 5]
 [ 1, 2, 3, 4, 5 ]
@@ -24,3 +24,7 @@ Example of getting the first element:
 ```
 
 Calling an array index equal to or greater than the array length returns 'undefined'.
+
+## What is an Array?
+
+Arrays are heterogeneous, meaning they can hold multiple data types, including primitives, objects and other arrays (called sub-arrays).
