@@ -2,7 +2,7 @@
 id: b2fbgyy39kk05enfzoipron
 title: Arrays
 desc: ''
-updated: 1675125108464
+updated: 1675788231086
 created: 1670276602270
 ---
 ## Arrays in JavaScript
@@ -110,5 +110,48 @@ Example:
 > numbers.forEach(num => squares.push(num * num));
 > squares
 = [ 1, 4, 9, 16, 1, 4, 9, 16 ]
+
+> let numbers = [1, 2, 3, 4]
+> let squares = numbers.map(num => num * num);
+> squares
+= [ 1, 4, 9, 16 ]
+
+> squares = numbers.map(num => num * num);
+= [ 1, 4, 9, 16 ]
 ```
+Although both methods work, ```forEach``` mutates the numbers array and returns ```undefined```, while ```map``` returns a new array.
+
+### Filtering Arrays with ```filter```
+
+Like ```map```, ```filter``` returns a new array. The difference is in the approach as ```filter``` returns truthy values from the callback function, which is generally some condition to return selected elements of the original array.
+
+Example:
+```js
+> let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2]
+> numbers.filter(num => num > 4)
+= [ 5, 6, 7, 8, 9, 10 ]
+
+> numbers
+= [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2 ]
+```
+
+Like ```map```, the ```filter``` method returns a new array and does not mutate the original array.
+
+### Building New Values from Arrays with ```reduce```
+
+This method reduces all elements in an array to a single value. It's useful for computing values in a single array, such as adding or subtracting them all together.
+
+Example:
+```js
+> let arr = [2, 3, 5, 7]
+> arr.reduce((accumulator, element) => accumulator + element, 0)
+= 17
+
+> arr.reduce((accumulator, element) => accumulator * element, 1)
+= 210
+```
+
+The ```reduce``` method takes two arguments: a callback function and an initialized value typically called the accumulator. Think of it like setting a counter variable to zero to begin a counting computation. The accumulator value is returned to the callback iteratively. Above, the accumulator is initialized to 0 for an addition function, and 1 for a multiplication function.
+
+
 
