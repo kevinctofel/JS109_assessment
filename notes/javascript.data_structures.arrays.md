@@ -2,7 +2,7 @@
 id: b2fbgyy39kk05enfzoipron
 title: Arrays
 desc: ''
-updated: 1675974298477
+updated: 1675975678548
 created: 1670276602270
 ---
 ## Arrays in JavaScript
@@ -213,4 +213,30 @@ The ```slice``` method returns the elements from a portion of an array. It takes
 
 The ```reverse``` method is destructive because it mutates the original array and returns the elements in reverse order.
 
+## Some exercises
+
+1. Use the map function to create a new array that contains one element for each element in the original array. If the element is an even value, then the corresponding element in the new array should contain the string 'even'; otherwise, the element in the new array should contain 'odd'.
+
+```js
+let myArray = [
+  1, 3, 6, 11,
+  4, 2, 4, 9,
+  17, 16, 0,
+];
+
+let newArray = myArray.map(element =>(element % 2 === 0 ? 'even' : 'odd'));
+console.log(newArray);
+```
+
+2. Write a findIntegers function that takes an array argument and returns an array that contains only the integers from the input array. Use the filter method in your function.
+
+```js
+const findIntegers = (arrOfThings) => {
+  return arrOfThings.filter(element => Number.isInteger(element));
+}
+let things = [1, 'a', '1', 3, NaN, 3.1415, -4, null, false];
+let integers = findIntegers(things);
+
+console.log(integers); // => [1, 3, -4]
+```
 
