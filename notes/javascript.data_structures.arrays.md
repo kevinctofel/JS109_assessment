@@ -2,7 +2,7 @@
 id: b2fbgyy39kk05enfzoipron
 title: Arrays
 desc: ''
-updated: 1675788231086
+updated: 1675974298477
 created: 1670276602270
 ---
 ## Arrays in JavaScript
@@ -153,5 +153,64 @@ Example:
 
 The ```reduce``` method takes two arguments: a callback function and an initialized value typically called the accumulator. Think of it like setting a counter variable to zero to begin a counting computation. The accumulator value is returned to the callback iteratively. Above, the accumulator is initialized to 0 for an addition function, and 1 for a multiplication function.
 
+## Some odd things about Arrays
+
+Because of zero-indexing, the ```length``` property of an array is always one plus the highest index value.
+Using the ```typeof``` operator on a array returns the value ```object```, not array. To verify if variable is referencing an array, use the ```Array.isArray(arr)``` method.
+
+You can manually set or change the ```length``` of an array. Doing so with a value smaller than the current length value will truncate the elements after the final element of the new array. Doing so with a larger value creates more space by expanding the array size. However, the new indices are not initialized with any values, so they return ```undefined```.
+
+Array indices can be negative numbers but the elements assigned to them are not counted in the ```length``` property.
+
+You can use the ```Object.keys(arr)``` method to return the index values because arrays are objects.
+
+## Nested arrays
+
+An array that contains other arrays is called a nested array. When looking at an nested array value with a single index, it will return the entire nested array from the main array. By appending index values together, you can navigate and read through nested arrays.
+
+Example:
+```js
+let scores = [['Kevin', 92], ['Barb", 86], ['Tyler', 73]];
+console.log (scores[1][1]); // This returns Barb's score of 86
+```
+
+## Array equality
+
+When comparing arrays for equality, you can't use the ```===``` operator because two different arrays point to to different memory locations, even if their values are the same. (Note: This is true of all objects in JavaScript)
+Example:
+```js
+> [1, 2, 3] === [1, 2, 3]
+= false
+```
+However, if you create a new variable that points to the variable of an existing array, these would be equal because both variables point to the same memory location.
+
+To verify that two arrays hold the same element, you need to compare each array element from the first array to the corresponding element in another array.
+
+## Other Array Methods
+
+### ```Array.includes()```
+
+The ```includes``` method checks to see if an array contains the argument value as an element. Example:
+
+```js
+> let a = [1, 2, 3, 4, 5]
+> a.includes(2)
+= true
+
+> a.includes(10)
+= false
+```
+
+### ```Array.sort()```
+
+The ```sort``` method mutates the passed array so that its elements are in order. This occurs in place, so the return value is a reference to the same array. Remember, arrays are unordered lists, so ```sort``` will order an array list.
+
+### ```Array.slice()```
+
+The ```slice``` method returns the elements from a portion of an array. It takes two optional arguments: The index of where to start the sliced portion and the index of where to end the slice. The portion does not include the index value of the second parameter. Without any arguments passed, ```slice``` returns a new copy of the original array.
+
+### ```Array.reverse()```
+
+The ```reverse``` method is destructive because it mutates the original array and returns the elements in reverse order.
 
 
