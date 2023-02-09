@@ -2,7 +2,7 @@
 id: b2fbgyy39kk05enfzoipron
 title: Arrays
 desc: ''
-updated: 1675975678548
+updated: 1675976707688
 created: 1670276602270
 ---
 ## Arrays in JavaScript
@@ -239,4 +239,6 @@ let integers = findIntegers(things);
 
 console.log(integers); // => [1, 3, -4]
 ```
+
+3. Use map and filter to first determine the lengths of all the elements in an array of string values, then discard the even values (keep the odd values).
 
