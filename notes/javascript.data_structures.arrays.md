@@ -2,7 +2,7 @@
 id: b2fbgyy39kk05enfzoipron
 title: Arrays
 desc: ''
-updated: 1675976707688
+updated: 1676390489157
 created: 1670276602270
 ---
 ## Arrays in JavaScript
@@ -215,7 +215,7 @@ The ```reverse``` method is destructive because it mutates the original array an
 
 ## Some exercises
 
-1. Use the map function to create a new array that contains one element for each element in the original array. If the element is an even value, then the corresponding element in the new array should contain the string 'even'; otherwise, the element in the new array should contain 'odd'.
+* Use the map function to create a new array that contains one element for each element in the original array. If the element is an even value, then the corresponding element in the new array should contain the string 'even'; otherwise, the element in the new array should contain 'odd'.
 
 ```js
 let myArray = [
@@ -228,7 +228,7 @@ let newArray = myArray.map(element =>(element % 2 === 0 ? 'even' : 'odd'));
 console.log(newArray);
 ```
 
-2. Write a findIntegers function that takes an array argument and returns an array that contains only the integers from the input array. Use the filter method in your function.
+* Write a findIntegers function that takes an array argument and returns an array that contains only the integers from the input array. Use the filter method in your function.
 
 ```js
 const findIntegers = (arrOfThings) => {
@@ -240,5 +240,73 @@ let integers = findIntegers(things);
 console.log(integers); // => [1, 3, -4]
 ```
 
-3. Use map and filter to first determine the lengths of all the elements in an array of string values, then discard the even values (keep the odd values).
+* Use map and filter to first determine the lengths of all the elements in an array of string values, then discard the even values (keep the odd values).
+
+```js
+const findIntegers = ((list) => list.filter(item => Number.isInteger(item)));
+let things = [1, 'a', '1', 3, NaN, 3.1415, -4, null, false];
+let integers = findIntegers(things);
+console.log(integers); // => [1, 3, -4]
+```
+
+* Use map and filter to first determine the lengths of all the elements in an array of string values, then discard the even values (keep the odd values).
+
+```js
+const oddLengths = (list) => list.filter(item => item.length % 2 ===1).map(item => item.length);
+
+let arr = ['a', 'abcd', 'abcde', 'abc', 'ab'];
+console.log(oddLengths(arr)); // => [1, 5, 3]
+```
+
+* Use reduce to compute the sum of the squares of all of the numbers in an array.
+
+```js
+const sumOfSquares = (list) => {
+  return list.reduce((accumulator, currentValue) => (currentValue * currentValue) + accumulator, 0);
+}
+
+let array = [3, 5, 7];
+console.log(sumOfSquares(array)); // => 83
+```
+
+* Write a function similar to the oddLengths function from Exercise 6, but don't use map or filter. Instead, try to use the reduce method.
+
+```js
+function oddLengths(list) {
+  let output = [];
+  list.reduce((accumulator, currentValue) => { // can refactor to use accumulator as array instead of output
+    if (currentValue.length % 2=== 1)
+      output.push(currentValue.length)
+  }, 1);
+  return output;
+}
+
+let arr = ['a', 'abcd', 'abcde', 'abc', 'ab'];
+console.log(oddLengths(arr)); // => [1, 5, 3]
+```
+
+* Without using a for, while, or do/while loop, write some code that checks whether the number 3 appears inside these arrays:
+
+```js
+
+// Easier way is to just pass array and use the .includes() function. 
+const isThree = (element) => element === 3;
+const threePresent  = (list) => list.some(isThree);
+
+let numbers1 = [1, 3, 5, 7, 9, 11];
+let numbers2 = [];
+let numbers3 = [2, 4, 6, 8];
+```
+* Write some code to replace the value 6 in the following array with 606:
+
+```js
+let arr = [
+  ["hello", "world"],
+  ["example", "mem", null, 6, 88],
+  [4, 8, 12]
+];
+
+arr[1][3] = 606;
+```
+
 
