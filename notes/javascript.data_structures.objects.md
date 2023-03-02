@@ -2,7 +2,7 @@
 id: xfj1cw13flf2irwhxy4kz97
 title: Objects
 desc: ''
-updated: 1677722664800
+updated: 1677724478227
 created: 1670276925220
 ---
 ## Objects in JavaScript
@@ -120,6 +120,49 @@ for (let prop in person) {
                               //    30
                               //    6 ft
 ```
+
+### Object keys
+
+```Object.keys()``` returns all of an object's own keys as an array. It does not return keys from any prototype objects.
+
+## Common Operations and Methods
+
+```Object.values()``` returns an object's own properties in an array. Example:
+```js
+let person = { name: 'Bob', age: 30, height: '6ft' };
+let personValues = Object.values(person);
+console.log(personValues); // => [ 'Bob', 30, '6ft' ]
+```
+
+```Object.entries()``` returns the keys and values of an object in a nested array. Example:
+```js
+let person = { name: 'Bob', age: 30, height: '6ft' };
+console.log(Object.entries(person)); // => [[ 'name', 'Bob' ], [ 'age', 30 ], [ 'height', '6ft' ]]
+```
+
+```Object.assign()``` merges the keys and values of two or more objects into a single object. This mutates the first object so that it contains the merged object. Example:
+```js
+> let objA = { a: 'foo' }
+= undefined
+
+> let objB = { b: 'bar' }
+= undefined
+
+> Object.assign(objA, objB)
+= { a: 'foo', b: 'bar' }
+```
+
+## Objects vs. Arrays
+
+How to choose between an object and an array for storing data:
+- If the values have individual names or labels, use and object.
+- If order matters, choose an array.
+- For stack and queue types of data, choose an array.
+
+NOTE: JavaScript will coerce non-string values when using them as object keys.
+
+
+
 
 
 
