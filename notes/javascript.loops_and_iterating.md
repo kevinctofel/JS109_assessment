@@ -2,7 +2,7 @@
 id: 1ee9kds01i6638da5ub39z2
 title: Loops and Iterating
 desc: ''
-updated: 1675039486568
+updated: 1678120754545
 created: 1673922007182
 ---
 ## Loops and Iterating
@@ -107,5 +107,28 @@ In this example, none of the calling functions know the return values until the 
 
 A recursive function must have a baseline condition, i.e.: the conditional in the above code.
 
+### for/in and for/of loops
+
+```for/in``` iterates over all enumerable properties of an object. Example:
+```js
+let obj = { foo: 1, bar: 2, qux: 'c' };
+for (let key in obj) {
+  console.log(key);
+}
+// Output:  foo
+//          bar
+//          qux
+```
+Note: Don't use ```for/in``` to iterate over arrays because the indices are stored as strings. Instead, use the ```for/of``` statement:
+```js
+let arr = [ 10, 20, 30 ]
+for (let value of arr) {
+  console.log(value);
+}
+// Output:  10
+//          20
+//          30
+```
+```for/of``` is also recommended when iterating through strings.
 
 
