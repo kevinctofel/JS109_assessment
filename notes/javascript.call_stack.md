@@ -2,7 +2,7 @@
 id: tldfi2vg3jdn9sqbxit7suk
 title: Call Stack
 desc: ''
-updated: 1672334736448
+updated: 1678122144919
 created: 1672333424449
 ---
 ## The Call Stack in JavaScript
@@ -16,3 +16,18 @@ This stack tracks what function is executing and what other functions haven't ye
 - If the stack takes up more space than it was assigned, a "stack overflow" error is thrown.
 
 ![](/assets/images/2022-12-29-12-09-33.png)
+
+## Stack Trace
+
+[JavaScript exception errors](./javascript.exceptions.md) return a stack trace, showing the type of error and where it occurred.
+Example:
+```js
+$ node error.js
+/Users/wolfy/tmp/x.js:2
+  console.log(bar);
+
+ReferenceError: bar is not defined
+    at foo (error.js:2:15)
+    at Object.<anonymous> (error.js:5:1)
+    ...
+```
