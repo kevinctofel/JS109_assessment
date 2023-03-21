@@ -2,7 +2,7 @@
 id: xfj1cw13flf2irwhxy4kz97
 title: Objects
 desc: ''
-updated: 1677724478227
+updated: 1678385050265
 created: 1670276925220
 ---
 ## Objects in JavaScript
@@ -19,7 +19,7 @@ Values can be retrieved by their keys:
 ```js
 > ({ dog: 'barks', cat: 'meows', pig: 'oinks' })['cat']
 = 'meows'
-// or objecta variable name and key in brackets
+// or objects variable name and key in brackets
 // animals['cat'];
 ```
 
