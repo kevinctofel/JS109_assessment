@@ -1,0 +1,114 @@
+<h1 id="objects">Objects<a aria-hidden="true" class="anchor-heading icon-link" href="#objects"></a></h1>
+<h2 id="objects-in-javascript">Objects in JavaScript<a aria-hidden="true" class="anchor-heading icon-link" href="#objects-in-javascript"></a></h2>
+<p>Objects can be a dictionary-like structure with keys matching unique values, i.e.: A key-value pair.</p>
+<p>Object literals are created with curly braces, {} , and keys separated from values with a colon, : Multiple key-value pairs are comma separated:</p>
+<pre class="language-js"><code class="language-js"><span class="token operator">></span> <span class="token punctuation">{</span> <span class="token literal-property property">dog</span><span class="token operator">:</span> <span class="token string">'barks'</span><span class="token punctuation">,</span> <span class="token literal-property property">cat</span><span class="token operator">:</span> <span class="token string">'meows'</span><span class="token punctuation">,</span> <span class="token literal-property property">pig</span><span class="token operator">:</span> <span class="token string">'oinks'</span> <span class="token punctuation">}</span>
+<span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">dog</span><span class="token operator">:</span> <span class="token string">'barks'</span><span class="token punctuation">,</span> <span class="token literal-property property">cat</span><span class="token operator">:</span> <span class="token string">'meows'</span><span class="token punctuation">,</span> <span class="token literal-property property">pig</span><span class="token operator">:</span> <span class="token string">'oinks'</span> <span class="token punctuation">}</span>
+</code></pre>
+<p>Values can be retrieved by their keys:</p>
+<pre class="language-js"><code class="language-js"><span class="token operator">></span> <span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">dog</span><span class="token operator">:</span> <span class="token string">'barks'</span><span class="token punctuation">,</span> <span class="token literal-property property">cat</span><span class="token operator">:</span> <span class="token string">'meows'</span><span class="token punctuation">,</span> <span class="token literal-property property">pig</span><span class="token operator">:</span> <span class="token string">'oinks'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">'cat'</span><span class="token punctuation">]</span>
+<span class="token operator">=</span> <span class="token string">'meows'</span>
+<span class="token comment">// or objects variable name and key in brackets</span>
+<span class="token comment">// animals['cat'];</span>
+</code></pre>
+<p>Other languages have key-value pairs but refer to them as dictionaries (Python?), associative arrays, maps and hashes.</p>
+<p>Object keys in JavaScript are strings (quotes are not needed) or symbols. Values can be any type.Example of creating an object with object literal syntax:</p>
+<pre class="language-js"><code class="language-js"><span class="token operator">></span> <span class="token keyword">let</span> person <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Jane'</span><span class="token punctuation">,</span> <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">37</span><span class="token punctuation">,</span> <span class="token literal-property property">hobbies</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'photography'</span><span class="token punctuation">,</span> <span class="token string">'genealogy'</span><span class="token punctuation">]</span> <span class="token punctuation">}</span>
+</code></pre>
+<p>Object values are accessed with dot notation or bracket notation. The latter is required when a variable stores a key name.</p>
+<pre class="language-js"><code class="language-js"><span class="token operator">></span> person<span class="token punctuation">.</span><span class="token property-access">name</span>                 <span class="token comment">// dot notation</span>
+<span class="token operator">=</span> <span class="token string">'Jane'</span>
+
+<span class="token operator">></span> person<span class="token punctuation">[</span><span class="token string">'age'</span><span class="token punctuation">]</span>               <span class="token comment">// bracket notation</span>
+<span class="token operator">=</span> <span class="token number">37</span>
+</code></pre>
+<p>To remove a value from an object, you can <code>delete</code> the object's key for that value. Doing so returns <code>true</code> unless the object property can't be deleted. Note: 'property' typically refers to an object key.</p>
+<p>When using <code>const</code> to declare and initialize an object, you can't change what the variable refers to. You can modify that object's properties and property values.</p>
+<p><code>Object.freeze()</code> prevents an object's properties from modification. This only works one level deep, however. Nested arrays or objects must be frozen to prevent modification.</p>
+<h2 id="objects-vs-primitives">Objects vs primitives<a aria-hidden="true" class="anchor-heading icon-link" href="#objects-vs-primitives"></a></h2>
+<p>Objects include simple objects, arrays, dates, functions and more. They're comprised of primitive values or other objects and are usually mutable.</p>
+<p>Primitive values are always <a href="https://developer.mozilla.org/en-US/docs/Glossary/Immutable">immutable</a> and considered atomic, i.e.; indivisible.</p>
+<h3 id="functions-are-objects">Functions are objects<a aria-hidden="true" class="anchor-heading icon-link" href="#functions-are-objects"></a></h3>
+<p>Variables can be assigned to functions.
+Example:</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">"Hello there!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>            <span class="token comment">// Prints "Hello there!"</span>
+
+<span class="token keyword">let</span> greet <span class="token operator">=</span> hello<span class="token punctuation">;</span>  <span class="token comment">// `greet` now points to the `hello` function</span>
+<span class="token function">greet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>            <span class="token comment">// Prints "Hello there!"</span>
+</code></pre>
+<p>Functions can be passed to other functions and can be returned by other functions. Example of passing a function to another function as an argument:</p>
+<pre class="language-js"><code class="language-js"><span class="token class-name">Array</span><span class="token punctuation">.</span><span class="token property-access">prototype</span><span class="token punctuation">.</span><span class="token method-variable function-variable method function property-access">forEach</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">callback</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> index <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> index <span class="token operator">&#x3C;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">length</span><span class="token punctuation">;</span> index <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">callback</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> array <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+array<span class="token punctuation">.</span><span class="token method function property-access">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token function">callback</span><span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="what-things-arent-objects-or-primitives">What things aren't objects or primitives?<a aria-hidden="true" class="anchor-heading icon-link" href="#what-things-arent-objects-or-primitives"></a></h3>
+<p>Anything that isn't data or a function isn't an object nor a primitive value:</p>
+<ul>
+<li>Variables and function names</li>
+<li>Statements (if, return, try, while, break)</li>
+<li>Keywords (new, function, let, const, class)</li>
+<li>Comments</li>
+</ul>
+<h2 id="prototypes">Prototypes<a aria-hidden="true" class="anchor-heading icon-link" href="#prototypes"></a></h2>
+<p>JavaScript objects can inherit properties from other objects.</p>
+<p>The <code>Object.create()</code> method creates a new object that inherits properties from an existing object. Example where <code>bob</code> is the prototype for the <code>studentBob</code> object:</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">let</span> bob <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Bob'</span><span class="token punctuation">,</span> <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">22</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> studentBob <span class="token operator">=</span> <span class="token known-class-name class-name">Object</span><span class="token punctuation">.</span><span class="token method function property-access">create</span><span class="token punctuation">(</span>bob<span class="token punctuation">)</span><span class="token punctuation">;</span>
+studentBob<span class="token punctuation">.</span><span class="token property-access">year</span> <span class="token operator">=</span> <span class="token string">'Senior'</span><span class="token punctuation">;</span>
+
+<span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>studentBob<span class="token punctuation">.</span><span class="token property-access">name</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// => 'Bob'</span>
+</code></pre>
+<h2 id="iteration">Iteration<a aria-hidden="true" class="anchor-heading icon-link" href="#iteration"></a></h2>
+<h3 id="the-forin-loop">The for/in loop<a aria-hidden="true" class="anchor-heading icon-link" href="#the-forin-loop"></a></h3>
+<p>Similar to a standard <code>for</code> loop but simpler as it iterates over all keys in an object. Example:</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">let</span> person <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Bob'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">30</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">height</span><span class="token operator">:</span> <span class="token string">'6 ft'</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword control-flow">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> prop <span class="token keyword">in</span> person<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>person<span class="token punctuation">[</span>prop<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>                             <span class="token comment">// => Bob</span>
+                              <span class="token comment">//    30</span>
+                              <span class="token comment">//    6 ft</span>
+</code></pre>
+<h3 id="object-keys">Object keys<a aria-hidden="true" class="anchor-heading icon-link" href="#object-keys"></a></h3>
+<p><code>Object.keys()</code> returns all of an object's own keys as an array. It does not return keys from any prototype objects.</p>
+<h2 id="common-operations-and-methods">Common Operations and Methods<a aria-hidden="true" class="anchor-heading icon-link" href="#common-operations-and-methods"></a></h2>
+<p><code>Object.values()</code> returns an object's own properties in an array. Example:</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">let</span> person <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Bob'</span><span class="token punctuation">,</span> <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token literal-property property">height</span><span class="token operator">:</span> <span class="token string">'6ft'</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> personValues <span class="token operator">=</span> <span class="token known-class-name class-name">Object</span><span class="token punctuation">.</span><span class="token method function property-access">values</span><span class="token punctuation">(</span>person<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>personValues<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// => [ 'Bob', 30, '6ft' ]</span>
+</code></pre>
+<p><code>Object.entries()</code> returns the keys and values of an object in a nested array. Example:</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">let</span> person <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Bob'</span><span class="token punctuation">,</span> <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token literal-property property">height</span><span class="token operator">:</span> <span class="token string">'6ft'</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token known-class-name class-name">Object</span><span class="token punctuation">.</span><span class="token method function property-access">entries</span><span class="token punctuation">(</span>person<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// => [[ 'name', 'Bob' ], [ 'age', 30 ], [ 'height', '6ft' ]]</span>
+</code></pre>
+<p><code>Object.assign()</code> merges the keys and values of two or more objects into a single object. This mutates the first object so that it contains the merged object. Example:</p>
+<pre class="language-js"><code class="language-js"><span class="token operator">></span> <span class="token keyword">let</span> objA <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">a</span><span class="token operator">:</span> <span class="token string">'foo'</span> <span class="token punctuation">}</span>
+<span class="token operator">=</span> <span class="token keyword nil">undefined</span>
+
+<span class="token operator">></span> <span class="token keyword">let</span> objB <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">b</span><span class="token operator">:</span> <span class="token string">'bar'</span> <span class="token punctuation">}</span>
+<span class="token operator">=</span> <span class="token keyword nil">undefined</span>
+
+<span class="token operator">></span> <span class="token known-class-name class-name">Object</span><span class="token punctuation">.</span><span class="token method function property-access">assign</span><span class="token punctuation">(</span>objA<span class="token punctuation">,</span> objB<span class="token punctuation">)</span>
+<span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">a</span><span class="token operator">:</span> <span class="token string">'foo'</span><span class="token punctuation">,</span> <span class="token literal-property property">b</span><span class="token operator">:</span> <span class="token string">'bar'</span> <span class="token punctuation">}</span>
+</code></pre>
+<h2 id="objects-vs-arrays">Objects vs. Arrays<a aria-hidden="true" class="anchor-heading icon-link" href="#objects-vs-arrays"></a></h2>
+<p>How to choose between an object and an array for storing data:</p>
+<ul>
+<li>If the values have individual names or labels, use and object.</li>
+<li>If order matters, choose an array.</li>
+<li>For stack and queue types of data, choose an array.</li>
+</ul>
+<p>NOTE: JavaScript will coerce non-string values when using them as object keys.</p>

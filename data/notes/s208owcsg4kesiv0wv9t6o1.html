@@ -1,0 +1,25 @@
+<h1 id="dates">Dates<a aria-hidden="true" class="anchor-heading icon-link" href="#dates"></a></h1>
+<h2 id="dates-1">Dates<a aria-hidden="true" class="anchor-heading icon-link" href="#dates-1"></a></h2>
+<p>JavaScript includes a <code>Date</code> constructor to create objects for dates and times.</p>
+<pre class="language-js"><code class="language-js"><span class="token operator">></span> <span class="token keyword">let</span> date <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token string">'December 25, 2012'</span><span class="token punctuation">)</span>
+<span class="token operator">></span> date<span class="token punctuation">.</span><span class="token method function property-access">getDay</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// returns day of the week (0-6)</span>
+<span class="token operator">=</span> <span class="token number">2</span>
+</code></pre>
+<p>Get the day name example:</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">getDayOfWeek</span><span class="token punctuation">(</span><span class="token parameter">date</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> daysOfWeek <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string">'Sunday'</span><span class="token punctuation">,</span>
+    <span class="token string">'Monday'</span><span class="token punctuation">,</span>
+    <span class="token string">'Tuesday'</span><span class="token punctuation">,</span>
+    <span class="token string">'Wednesday'</span><span class="token punctuation">,</span>
+    <span class="token string">'Thursday'</span><span class="token punctuation">,</span>
+    <span class="token string">'Friday'</span><span class="token punctuation">,</span>
+    <span class="token string">'Saturday'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+  <span class="token keyword control-flow">return</span> daysOfWeek<span class="token punctuation">[</span>date<span class="token punctuation">.</span><span class="token method function property-access">getDay</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> date <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token string">'December 25, 2012'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token function">getDayOfWeek</span><span class="token punctuation">(</span>date<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// => Tuesday</span>
+</code></pre>

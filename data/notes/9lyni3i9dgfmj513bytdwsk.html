@@ -1,0 +1,13 @@
+<h1 id="methods">Methods<a aria-hidden="true" class="anchor-heading icon-link" href="#methods"></a></h1>
+<h3 id="method-chaining">Method Chaining<a aria-hidden="true" class="anchor-heading icon-link" href="#method-chaining"></a></h3>
+<p>Example: </p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">let</span> str <span class="token operator">=</span> <span class="token string">'Pete Hanson'</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> names <span class="token operator">=</span> str<span class="token punctuation">.</span><span class="token method function property-access">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">split</span><span class="token punctuation">(</span><span class="token string">' '</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">reverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">join</span><span class="token punctuation">(</span><span class="token string">', '</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>names<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// => HANSON, PETE</span>
+</code></pre>
+<p>Note the multiple methods chained together where methods are called on the return value of other methods.</p>
+<hr>
+<strong>Children</strong>
+<ol>
+<li><a href="/JS109_assessment/notes/kvnm1b4b3zmoguoth5z4ab2">Instance_vs_static</a></li>
+</ol>

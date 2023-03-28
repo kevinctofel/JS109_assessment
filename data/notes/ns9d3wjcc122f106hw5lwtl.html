@@ -1,0 +1,99 @@
+<h1 id="pass-by-reference-vs-pass-by-value">Pass by reference vs pass by value<a aria-hidden="true" class="anchor-heading icon-link" href="#pass-by-reference-vs-pass-by-value"></a></h1>
+<h2 id="pass-by-value">Pass by Value<a aria-hidden="true" class="anchor-heading icon-link" href="#pass-by-value"></a></h2>
+<p>Passing a variable by value to a function means the function can't set the original variable to a different value. The original variable will still contain the original value.</p>
+<p>Example:</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">changeName</span><span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  name <span class="token operator">=</span> <span class="token string">"bob"</span><span class="token punctuation">;</span> <span class="token comment">// does this reassignment change the variable outside the function? NO</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">anotherFunction</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> name <span class="token operator">=</span> <span class="token string">"jim"</span><span class="token punctuation">;</span>
+  <span class="token function">changeName</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// => logs 'jim'</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">anotherFunction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="pass-by-reference">Pass by Reference<a aria-hidden="true" class="anchor-heading icon-link" href="#pass-by-reference"></a></h2>
+<p>Example of pass by reference:</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">capitalize</span><span class="token punctuation">(</span><span class="token parameter">names</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> index <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> index <span class="token operator">&#x3C;</span> names<span class="token punctuation">.</span><span class="token property-access">length</span><span class="token punctuation">;</span> index<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    names<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token operator">=</span> names<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token method function property-access">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> names<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token method function property-access">slice</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> names <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"chris"</span><span class="token punctuation">,</span> <span class="token string">"kevin"</span><span class="token punctuation">,</span> <span class="token string">"naveed"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token function">capitalize</span><span class="token punctuation">(</span>names<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>names<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// => ['Chris', 'Kevin', 'Naveed']</span>
+</code></pre>
+<p>Similar example where the function doesn't change the values</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">capitalize</span><span class="token punctuation">(</span><span class="token parameter">names</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow">return</span> names<span class="token punctuation">.</span><span class="token method function property-access">map</span><span class="token punctuation">(</span><span class="token parameter">name</span> <span class="token arrow operator">=></span> name<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token method function property-access">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> name<span class="token punctuation">.</span><span class="token method function property-access">slice</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> names <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"chris"</span><span class="token punctuation">,</span> <span class="token string">"kevin"</span><span class="token punctuation">,</span> <span class="token string">"naveed"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token function">capitalize</span><span class="token punctuation">(</span>names<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// returns ['Chris', 'Kevin', 'Naveed']</span>
+<span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>names<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// => ['chris', 'kevin', 'naveed'] // The original object still has the original values because the capitalize() function doesn't mutate it. Instead, it returns a new array object.</span>
+</code></pre>
+<h2 id="how-javascript-manages-pass-by-value-vs-pass-by-reference">How JavaScript manages pass by value vs pass by reference<a aria-hidden="true" class="anchor-heading icon-link" href="#how-javascript-manages-pass-by-value-vs-pass-by-reference"></a></h2>
+<p>Passing primitive values to functions is pass by value so functions don't mutate the primitive values.</p>
+<p>JavaScript always treats objects passed to functions as pass by reference, and therefore, can mutate those objects.</p>
+<p><strong>When an operation within the function mutates its argument, it affects the original object.</strong></p>
+<p>Functions that mutate their callers are called destructive functions or methods. Example:</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">addNames</span><span class="token punctuation">(</span><span class="token parameter">arr<span class="token punctuation">,</span> name</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  arr<span class="token punctuation">.</span><span class="token method function property-access">push</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> names <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"bob"</span><span class="token punctuation">,</span> <span class="token string">"kim"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token function">addNames</span><span class="token punctuation">(</span>names<span class="token punctuation">,</span> <span class="token string">"jim"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>names<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// => [ 'bob', 'kim', 'jim' ]</span>
+</code></pre>
+<p>Reassignment is not a destructive operation. Example:</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">addName</span><span class="token punctuation">(</span><span class="token parameter">arr<span class="token punctuation">,</span> name</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  arr <span class="token operator">=</span> arr<span class="token punctuation">.</span><span class="token method function property-access">concat</span><span class="token punctuation">(</span><span class="token punctuation">[</span>name<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// not destructive</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> names <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"bob"</span><span class="token punctuation">,</span> <span class="token string">"kim"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token function">addName</span><span class="token punctuation">(</span>names<span class="token punctuation">,</span> <span class="token string">"jim"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>names<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// => [ 'bob', 'kim', ]</span>
+</code></pre>
+<p>Similar example with a destructive function:</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">addNames</span><span class="token punctuation">(</span><span class="token parameter">arr<span class="token punctuation">,</span> name</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+  arr <span class="token operator">=</span> arr<span class="token punctuation">.</span><span class="token method function property-access">push</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// destructive through mutation</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> names <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"bob"</span><span class="token punctuation">,</span> <span class="token string">"kim"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token function">addNames</span><span class="token punctuation">(</span>names<span class="token punctuation">,</span> <span class="token string">"jim"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>names<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// => [ 'bob', 'kim', 'jim' ]</span>
+</code></pre>
+<h2 id="return-values">Return values<a aria-hidden="true" class="anchor-heading icon-link" href="#return-values"></a></h2>
+<p>Values returned by functions can be pass by value or pass by reference.</p>
+<p>Example of pass by value because the caller passes a primitive:</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token parameter">number</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow">return</span> number<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> number <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> newNumber <span class="token operator">=</span> <span class="token function">foo</span><span class="token punctuation">(</span>number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>number<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// 1</span>
+<span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>newNumber<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 1</span>
+
+number <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+<span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>number<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// 3</span>
+<span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>newNumber<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 1</span>
+</code></pre>
+<p>Example of pass by reference because the caller passes an object:</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">bar</span><span class="token punctuation">(</span><span class="token parameter">array</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow">return</span> array<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> array <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> newArray <span class="token operator">=</span> <span class="token function">bar</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>array <span class="token operator">===</span> newArray<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// true (they are same object)</span>
+
+array<span class="token punctuation">.</span><span class="token method function property-access">push</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// [ 1, 2, 3, 4 ]</span>
+<span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>newArray<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [ 1, 2, 3, 4 ]</span>
+</code></pre>
+<h2 id="assignment">Assignment<a aria-hidden="true" class="anchor-heading icon-link" href="#assignment"></a></h2>
+<p>Pass by value and pass by reference don't apply to assignment of variables.</p>

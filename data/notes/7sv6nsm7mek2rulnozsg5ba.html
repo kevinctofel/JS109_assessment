@@ -1,0 +1,61 @@
+<h1 id="scope">Scope<a aria-hidden="true" class="anchor-heading icon-link" href="#scope"></a></h1>
+<h2 id="variable-scope-in-javascript">Variable scope in JavaScript<a aria-hidden="true" class="anchor-heading icon-link" href="#variable-scope-in-javascript"></a></h2>
+<p>Scope determines where variables and their data are available to a program. </p>
+<p>Block scope: <code>let</code> and <code>const</code> variables are accessible in the block they are declared. Blocks are defined by curly braces in JavaScript. These two variable types have the same scope.</p>
+<p>Code from one block cannot directly access variables declared in another block as those are out of scope.</p>
+<p>Technically, not all code between curly braces is in a block. Object literals, for example do not define a block. Examples:</p>
+<pre class="language-js"><code class="language-js"><span class="token punctuation">{</span>
+  <span class="token comment">// this is a block</span>
+  <span class="token keyword">let</span> foo <span class="token operator">=</span> <span class="token number">42</span><span class="token punctuation">;</span>
+  <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>foo<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// not technically a block. However, we can treat it as a block.</span>
+  <span class="token keyword">let</span> foo <span class="token operator">=</span> <span class="token number">42</span><span class="token punctuation">;</span>               <span class="token comment">// foo has block scope</span>
+  <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>foo<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> foo <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token comment">// this is not a block</span>
+  <span class="token literal-property property">bar</span><span class="token operator">:</span> <span class="token number">42</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Due to block scope, this code returns an error as the variable <code>a</code> doesn't exist outside of the code block:</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword control-flow">if</span> <span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">===</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token string">'foo'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// ReferenceError: a is not defined</span>
+</code></pre>
+<h2 id="global-scope">Global Scope<a aria-hidden="true" class="anchor-heading icon-link" href="#global-scope"></a></h2>
+<p>Variables in JavaScript with no functions or blocks have global scope. Additionally, any variables existing outside of functions or blocks have global scope.</p>
+<h2 id="local-scope">Local Scope<a aria-hidden="true" class="anchor-heading icon-link" href="#local-scope"></a></h2>
+<p>Two forms of local scope: Function scope and block scope.</p>
+<h3 id="function-scope">Function Scope<a aria-hidden="true" class="anchor-heading icon-link" href="#function-scope"></a></h3>
+<p>Variable scope is determined by where it is declared, so if you declare a variable in a function it is available to the entire function. Note that nested functions have nested scope.</p>
+<ol>
+<li>
+<p>Outer scope variables can be accessed by the inner scope, i.e.: a global variable can be accessed by a function.</p>
+</li>
+<li>
+<p>Inner scope variables can not be accessed by the outer scope. i.e.: code outside of a function can't directly access variables within that function. Typically JavaScript would return a <code>ReferenceError</code> as the variable is not defined globally.</p>
+</li>
+<li>
+<p>Peer scopes do not conflict, even with the same variable name. </p>
+</li>
+<li>
+<p>Nested functions have their own variable scope.</p>
+</li>
+<li>
+<p>Inner scope variables can shadow outer scope variables, i.e.: In cases when inner and outer scope variables have the same name, the inner variable prevents the outer variable from being accessed. Example:</p>
+</li>
+</ol>
+<pre class="language-js"><code class="language-js"><span class="token keyword">let</span> number <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span> <span class="token comment">// this 'number' is ignored below</span>
+
+<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token method function property-access">forEach</span><span class="token punctuation">(</span><span class="token parameter">number</span> <span class="token arrow operator">=></span> <span class="token punctuation">{</span>
+  <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="block-scope">Block Scope<a aria-hidden="true" class="anchor-heading icon-link" href="#block-scope"></a></h3>
+<p>Blocks are defined by statements and expressions within curly braces. The rules for block scope are the same as function scope, but limited to within the code block.</p>

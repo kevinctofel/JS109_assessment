@@ -1,0 +1,23 @@
+<h1 id="typeof">Typeof<a aria-hidden="true" class="anchor-heading icon-link" href="#typeof"></a></h1>
+<h2 id="typeof-operator-in-javascript">Typeof operator in JavaScript<a aria-hidden="true" class="anchor-heading icon-link" href="#typeof-operator-in-javascript"></a></h2>
+<p>The typeof operator returns the data type of an operand.</p>
+<p>Example:</p>
+<pre class="language-js"><code class="language-js"><span class="token operator">></span> <span class="token keyword">typeof</span> <span class="token number">1</span>
+<span class="token operator">=</span> <span class="token string">'number'</span>
+
+<span class="token operator">></span> <span class="token keyword">typeof</span> <span class="token string">'foo'</span>
+<span class="token operator">=</span> <span class="token string">'string'</span>
+
+<span class="token operator">></span> <span class="token keyword">typeof</span> <span class="token boolean">true</span>
+<span class="token operator">=</span> <span class="token string">'boolean'</span>
+
+<span class="token operator">></span> <span class="token keyword">typeof</span> <span class="token keyword nil">undefined</span>
+<span class="token operator">=</span> <span class="token string">'undefined'</span>
+
+<span class="token operator">></span> <span class="token keyword">typeof</span> <span class="token keyword null nil">null</span>
+<span class="token operator">=</span> <span class="token string">'object'</span> <span class="token comment">// That's just weird</span>
+
+<span class="token operator">></span> <span class="token keyword">typeof</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
+<span class="token operator">=</span> <span class="token string">'object'</span> <span class="token comment">// You'd expect this to be an array, but arrays are objects</span>
+</code></pre>
+<p>Since typeof is an operator and not a method, it doesn't use () like a method.</p>

@@ -1,0 +1,175 @@
+<h1 id="flow-control">Flow control<a aria-hidden="true" class="anchor-heading icon-link" href="#flow-control"></a></h1>
+<h2 id="flow-control-in-javascript">Flow Control in JavaScript<a aria-hidden="true" class="anchor-heading icon-link" href="#flow-control-in-javascript"></a></h2>
+<p>How a program branches off to do different things based on inputs, outputs, etc...</p>
+<h3 id="conditionals">Conditionals<a aria-hidden="true" class="anchor-heading icon-link" href="#conditionals"></a></h3>
+<p>Checking "if" something is or happens changes the path or flow of code.</p>
+<p>Simplest method is with <code>if</code> statements, which can also be followed by <code>else</code> conditions.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>x <span class="token operator">===</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>                  <span class="token comment">// If statement</span>
+  <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">"x is 3"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment">// Clause to run</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Note in above example, the curly braces for the code block aren't needed. A single statement or expression doesn't require them but it's good practice.</p>
+<h3 id="comparisons">Comparisons<a aria-hidden="true" class="anchor-heading icon-link" href="#comparisons"></a></h3>
+<p>Comparisons return the boolean values of <code>true</code> or <code>false</code> depending on the condition and the operands.</p>
+<div class="table-responsive">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Operator</th><th>Description</th></tr></thead><tbody><tr><td><code>===</code></td><td>Strict equality of value and type ; returns <code>true</code> if they are the same</td></tr><tr><td><code>!==</code></td><td>Strict inequality of value and type; returns <code>false</code> if they are the same</td></tr><tr><td><code>==</code></td><td>Non-strict or loose equality. Attempts to coerce types of one or both operands. Returns <code>true</code> if values but not type are the same.</td></tr><tr><td><code>!=</code></td><td>Non-strict or loose inequality. Attempt to coerce types of one or both operands. Returns <code>false</code> if values are the same, regardless of type.</td></tr><tr><td><code>&#x3C;</code></td><td>Less than returns <code>true</code> when left operand value is less than the right operand value</td></tr><tr><td><code>></code></td><td>Greater than returns <code>true</code> when right operand value is greater than left operand value</td></tr><tr><td><code>&#x3C;=</code></td><td>Less than or equal to returns <code>true</code> when left operand value is less than or equal to the right operand value</td></tr><tr><td><code>>=</code></td><td>Greater than or equal to returns <code>true</code> when the left operand value is greater than or equal to the right operand value</td></tr><tr><td><code>!</code></td><td>Logical not operator, negates an operand</td></tr><tr><td><code>&#x26;&#x26;</code></td><td>Logical and operator, returns <code>true</code> only if both operands are true</td></tr><tr><td>||</td><td>Logical or operator, returns <code>true</code> if either operand is true</td></tr></tbody></table></div>
+<h3 id="short-circuits">Short circuits<a aria-hidden="true" class="anchor-heading icon-link" href="#short-circuits"></a></h3>
+<p>Logical operators use short circuit evaluation so they can re-flow code sooner (or not at all) based on just the first operand.</p>
+<p>In an <code>&#x26;&#x26;</code> evaluation, if the first operand returns <code>false</code>, the second doesn't have to be evaluated.</p>
+<p>In an <code>||</code> evaluation, if the first operand returns <code>true</code>, the second doesn't have to be evaluated.</p>
+<h3 id="truthiness">Truthiness<a aria-hidden="true" class="anchor-heading icon-link" href="#truthiness"></a></h3>
+<p><code>If</code> statements always evaluated to <code>true</code> or <code>false</code>. But expressions can be evaluated for truthiness by JavaScript coercion, where the expression value is changed to represent true or false.</p>
+<p>Examples: </p>
+<pre class="language-js"><code class="language-js">a <span class="token operator">=</span> <span class="token number">5</span>
+<span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>a<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">"how can this be true?"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword control-flow">else</span> <span class="token punctuation">{</span>
+  <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">"it is not true"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+b <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">"how can this be true?"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword control-flow">else</span> <span class="token punctuation">{</span>
+  <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">"it is not true"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>The first statement is truthy because the value of <code>a</code> is coerced to <code>true</code>.
+The second statement is not truthy, or falsy, because the value of <code>b</code> is coerced to <code>false</code>.</p>
+<p>Why? JavaScript coerces the following values to <code>false</code>:</p>
+<ul>
+<li>false</li>
+<li>The numbers 0, -0, and 0n</li>
+<li><code>''</code>; an empty string</li>
+<li>undefined</li>
+<li>null</li>
+<li>NaN</li>
+</ul>
+<p>All other values are coerced to <code>true</code> in JavaScript.</p>
+<p>With <code>&#x26;&#x26;</code> and <code>||</code>, truthy and falsy can still short circuit, returning the value of the last evaluated operand.
+Rather than test expressions with these with multiple code lines, use a ternary expression for clarity.
+Example:</p>
+<pre class="language-js"><code class="language-js"><span class="token comment">// Instead of this:</span>
+<span class="token keyword">let</span> foo <span class="token operator">=</span> <span class="token keyword null nil">null</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> bar <span class="token operator">=</span> <span class="token string">'qux'</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> isOk <span class="token operator">=</span> foo <span class="token operator">||</span> bar<span class="token punctuation">;</span>
+
+<span class="token comment">// Use a ternary expression like this:</span>
+<span class="token keyword">let</span> isOk <span class="token operator">=</span> <span class="token punctuation">(</span>foo <span class="token operator">||</span> bar<span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token boolean">true</span> <span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="operator-precedence">Operator precedence<a aria-hidden="true" class="anchor-heading icon-link" href="#operator-precedence"></a></h3>
+<p>From highest to lowest: </p>
+<ul>
+<li>&#x3C;=, &#x3C;, >, >= - Comparison</li>
+<li>===, !==, ==, != - Equality</li>
+<li>&#x26;&#x26; - Logical AND</li>
+<li>|| - Logical OR
+Note: expressions in parenthesis take precedence over those that are not.</li>
+</ul>
+<h3 id="the-ternary-operator">The ternary operator<a aria-hidden="true" class="anchor-heading icon-link" href="#the-ternary-operator"></a></h3>
+<p>Uses a combination of <code>?</code>, <code>:</code> after the expression, with the truthy and falsy return values inserted.
+Example:</p>
+<pre class="language-js"><code class="language-js"><span class="token operator">></span> <span class="token number">1</span> <span class="token operator">==</span> <span class="token number">1</span> <span class="token operator">?</span> <span class="token string">'this is true'</span> <span class="token operator">:</span> <span class="token string">'this is not true'</span>
+<span class="token operator">=</span> <span class="token string">'this is true'</span>
+
+<span class="token operator">></span> <span class="token number">1</span> <span class="token operator">==</span> <span class="token number">0</span> <span class="token operator">?</span> <span class="token string">"this is true"</span> <span class="token operator">:</span> <span class="token string">"this is not true"</span>
+<span class="token operator">=</span> <span class="token string">'this is not true'</span>
+</code></pre>
+<p>Why use a ternary expression over an <code>if/else</code> statement? Because it's a single expression and can be treated as value that can be stored, passed in as an argument, etc...</p>
+<p>Ternary expressions should be used to select between two values, not two actions. It's good practice to assign the value of a ternary expression to a variable or passed as an argument.
+Example:</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">let</span> foo <span class="token operator">=</span> hitchhiker <span class="token operator">?</span> <span class="token number">42</span> <span class="token operator">:</span> <span class="token number">3.1415</span><span class="token punctuation">;</span>    <span class="token comment">// Assign result of ?: to a variable</span>
+<span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>hitchhiker <span class="token operator">?</span> <span class="token number">42</span> <span class="token operator">:</span> <span class="token number">3.1415</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Pass result as argument</span>
+<span class="token keyword control-flow">return</span> hitchhiker <span class="token operator">?</span> <span class="token number">42</span><span class="token operator">:</span> <span class="token number">3.1415</span><span class="token punctuation">;</span>        <span class="token comment">// Return result</span>
+</code></pre>
+<h3 id="switch-statements">Switch statements<a aria-hidden="true" class="anchor-heading icon-link" href="#switch-statements"></a></h3>
+<p>Similar to an <code>if</code> statement but compares a single value against multiple values for strict equality. It evaluates the expression to the value in each <code>case</code> clause. The <code>break</code> statements effectively short circuit the <code>switch</code> statement by dropping out when the evaluation is truthy.
+Example:</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+
+<span class="token keyword control-flow">switch</span> <span class="token punctuation">(</span>a<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">case</span> <span class="token number">5</span><span class="token operator">:</span>
+    <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">'a is 5'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword control-flow">break</span><span class="token punctuation">;</span>
+  <span class="token keyword">case</span> <span class="token number">6</span><span class="token operator">:</span>
+    <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">'a is 6'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword control-flow">break</span><span class="token punctuation">;</span>
+  <span class="token keyword module">default</span><span class="token operator">:</span>
+    <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">'a is neither 5, nor 6'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword control-flow">break</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token comment">// => a is 5</span>
+</code></pre>
+<p><code>Switch</code> statements can fall through multiple values that satisfy strict equality, like an <code>||</code> operator.
+Example:</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+
+<span class="token keyword control-flow">switch</span> <span class="token punctuation">(</span>a<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">case</span> <span class="token number">5</span><span class="token operator">:</span>
+  <span class="token keyword">case</span> <span class="token number">6</span><span class="token operator">:</span>
+  <span class="token keyword">case</span> <span class="token number">7</span><span class="token operator">:</span>
+    <span class="token comment">// executed if a is 5, 6, or 7</span>
+    <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">"a is either 5, 6, or 7"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword control-flow">break</span><span class="token punctuation">;</span>
+  <span class="token keyword">case</span> <span class="token number">8</span><span class="token operator">:</span>
+  <span class="token keyword">case</span> <span class="token number">9</span><span class="token operator">:</span>
+    <span class="token comment">// executed if a is 8 or 9</span>
+    <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">'a is 8 or 9'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword control-flow">break</span><span class="token punctuation">;</span>
+  <span class="token keyword module">default</span><span class="token operator">:</span>
+    <span class="token comment">// executed if a is anything else</span>
+    <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">'a is not 5, 6, 7, 8, or 9'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword control-flow">break</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>

@@ -1,0 +1,10 @@
+<h1 id="side-effects">Side effects<a aria-hidden="true" class="anchor-heading icon-link" href="#side-effects"></a></h1>
+<h2 id="functions-have-side-effects-in-these-instances">Functions have side effects in these instances<a aria-hidden="true" class="anchor-heading icon-link" href="#functions-have-side-effects-in-these-instances"></a></h2>
+<ol>
+<li>When a function reassigns a non-local (or outside of function scope) variable.</li>
+<li>When a function mutates an object value referenced by a non-local variable.</li>
+<li>When reading or writing to a file, network connection, browser or the console.</li>
+<li>When a function raises an exception without handling the exception.</li>
+<li>When a function calls another function that has side effects.</li>
+</ol>
+<p><strong>Functions should return a useful value OR have a side effect, but not BOTH.</strong></p>

@@ -1,0 +1,11 @@
+<h1 id="regex">Regex<a aria-hidden="true" class="anchor-heading icon-link" href="#regex"></a></h1>
+<h2 id="regex-1">RegEx<a aria-hidden="true" class="anchor-heading icon-link" href="#regex-1"></a></h2>
+<p>Regular expressions are character sequences to test for matching patterns in strings. The RegEx sequence is placed between two forward slashes. You can store a RegEx in a variable or use a RegEx object. Example using the <code>test()</code> method on a RegEx object.</p>
+<pre class="language-js"><code class="language-js"><span class="token operator">></span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">o</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">.</span><span class="token method function property-access">test</span><span class="token punctuation">(</span><span class="token string">'bobcat'</span><span class="token punctuation">)</span>
+<span class="token operator">=</span> <span class="token boolean">true</span>
+
+<span class="token operator">></span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">l</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">.</span><span class="token method function property-access">test</span><span class="token punctuation">(</span><span class="token string">'bobcat'</span><span class="token punctuation">)</span>
+<span class="token operator">=</span> <span class="token boolean">false</span>
+</code></pre>
+<p>The RegEx <code>match()</code> method returns an array with all matches, or <code>null</code> if there is no match.</p>
+<p>The <code>/g</code> flag signifies a global match so the returned array includes all matching substrings.</p>

@@ -1,0 +1,82 @@
+<h1 id="coercion">Coercion<a aria-hidden="true" class="anchor-heading icon-link" href="#coercion"></a></h1>
+<h2 id="explicit-coercion">Explicit Coercion<a aria-hidden="true" class="anchor-heading icon-link" href="#explicit-coercion"></a></h2>
+<p>If we want to change a data type, such as a string of numbers to a Number type, we perform an explicit type coercion.</p>
+<ul>
+<li>String to Numbers</li>
+</ul>
+<p>Use the Number function to coerce a string to a number:</p>
+<pre class="language-js"><code class="language-js"><span class="token operator">></span> <span class="token known-class-name class-name">Number</span><span class="token punctuation">(</span><span class="token string">'1'</span><span class="token punctuation">)</span>
+<span class="token operator">=</span> <span class="token number">1</span>
+</code></pre>
+<p>The Number function accepts a string value argument, returning a number if the string is comprised of valid numeric data. </p>
+<p><strong>If the string doesn't have valid numeric data, <code>Number()</code> will return <code>NaN</code></strong></p>
+<p><strong>Coercing an empty string to a number returns a <code>0</code></strong></p>
+<p><strong>Coercing a boolean value from <code>true</code> returns a <code>1</code> while coercing <code>false</code> returns a <code>0</code></strong></p>
+<ul>
+<li>parseInt() function alternative</li>
+</ul>
+<p>Similar to the Number() function for coercion but works with a mix of string data comprised of numbers and non-numeric characters. </p>
+<p><strong><code>parseInt()</code> will convert string numbers until it reaches an invalid character.</strong></p>
+<pre class="language-js"><code class="language-js"><span class="token operator">></span> <span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token string">'12xyz'</span><span class="token punctuation">)</span>
+<span class="token operator">=</span> <span class="token number">12</span>
+</code></pre>
+<p>Note that if you pass a fractional character to parseInt() it will only return the integer value, not any decimal values less than 1.</p>
+<pre class="language-js"><code class="language-js"><span class="token operator">></span> <span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token string">'3.1415'</span><span class="token punctuation">)</span>
+<span class="token operator">=</span> <span class="token number">3</span>
+</code></pre>
+<p><strong><code>parseInt()</code> can accept a second argument called the radix; this indicates the base of the number argument, i.e.: radix of 2 = base 2</strong></p>
+<ul>
+<li>parseFloat() alternative</li>
+</ul>
+<p>However, the parseFloat() function will handle fractional numbers for explicit coercion.</p>
+<pre class="language-js"><code class="language-js"><span class="token operator">></span> <span class="token function">parseFloat</span><span class="token punctuation">(</span><span class="token string">'12.5foo'</span><span class="token punctuation">)</span>
+<span class="token operator">=</span> <span class="token number">12.5</span>
+</code></pre>
+<ul>
+<li>Numbers to strings</li>
+</ul>
+<p>To explicitly coerce numbers into a string data type, use the String() function.</p>
+<p><strong> This function can be used on <code>undefined</code> and <code>null</code> while the <code>toString()</code> can not.</strong></p>
+<pre class="language-js"><code class="language-js"><span class="token operator">></span> <span class="token known-class-name class-name">String</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span>
+<span class="token operator">=</span> <span class="token string">'20'</span>
+</code></pre>
+<ul>
+<li>Using the unary <code>+</code> operator to coerce strings to numbers</li>
+</ul>
+<pre class="language-js"><code class="language-js"><span class="token operator">+</span><span class="token string">'1'</span> <span class="token comment">// returns the number value 1</span>
+</code></pre>
+<ul>
+<li>Coercing values to strings with the <code>toString()</code> method</li>
+</ul>
+<pre class="language-js"><code class="language-js"><span class="token keyword">let</span> number <span class="token operator">=</span> <span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>number<span class="token punctuation">.</span><span class="token method function property-access">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// returns the string "123"</span>
+</code></pre>
+<p>This can also be used on arrays:</p>
+<pre class="language-js"><code class="language-js"><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token method function property-access">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// returns the concatenated string "1, 2, 3";</span>
+</code></pre>
+<h2 id="implicit-coercion">Implicit Coercion<a aria-hidden="true" class="anchor-heading icon-link" href="#implicit-coercion"></a></h2>
+<ul>
+<li>Using the <code>==</code> operator</li>
+</ul>
+<p>The non-strict equality operator will coerce values that are not of the same type:</p>
+<ol>
+<li>When a number is compared with a string using ==, the string is coerced into a number.</li>
+<li>When a boolean is compared with any other value, it is coerced into a number and compared again using the == operator.</li>
+<li>When an object is compared with a primitive value, the object is coerced into a primitive value and compared again using the == operator.</li>
+<li>A == comparison of undefined with null evaluates as true.</li>
+</ol>
+<p><strong> When using the non-strict equality operator on two objects, it only returns true if they are the same object.</strong></p>
+<ul>
+<li>Using the binary <code>+</code> operator</li>
+</ul>
+<p>When one of the operands is a string, the <code>+</code> operator will coerce the other operand to a string and concatenate them.</p>
+<pre class="language-js"><code class="language-js"><span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">'number '</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// returns the string 'number 1'</span>
+</code></pre>
+<p>When one of the operands is an object, both are converted to strings and concatenated:</p>
+<pre class="language-js"><code class="language-js"><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token number">2</span><span class="token punctuation">;</span>        <span class="token comment">// "12"</span>
+<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">'2'</span><span class="token punctuation">;</span>      <span class="token comment">// "12"</span>
+<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token number">3</span><span class="token punctuation">;</span>     <span class="token comment">// "1,23"</span>
+<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token number">5</span><span class="token punctuation">;</span>         <span class="token comment">// "5"</span>
+<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token boolean">true</span><span class="token punctuation">;</span>      <span class="token comment">// "true"</span>
+<span class="token number">42</span> <span class="token operator">+</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>        <span class="token comment">// "42[object Object]"</span>
+</code></pre>

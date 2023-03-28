@@ -1,0 +1,36 @@
+<h1 id="variables">Variables<a aria-hidden="true" class="anchor-heading icon-link" href="#variables"></a></h1>
+<h2 id="variables-in-javascript">Variables in JavaScript<a aria-hidden="true" class="anchor-heading icon-link" href="#variables-in-javascript"></a></h2>
+<p>Named area in memory to store data.
+Should be descriptive so someone reading code will know exactly what the function does.</p>
+<p>Part of the broader term called identifiers:</p>
+<ul>
+<li>Variable names declared by let and var</li>
+<li>Constant names declared by const</li>
+<li>Property names of objects</li>
+<li>Function names</li>
+<li>Function parameters</li>
+<li>Class names</li>
+</ul>
+<h2 id="variables-as-pointers">Variables as Pointers<a aria-hidden="true" class="anchor-heading icon-link" href="#variables-as-pointers"></a></h2>
+<h3 id="working-with-primitive-values">Working with primitive values<a aria-hidden="true" class="anchor-heading icon-link" href="#working-with-primitive-values"></a></h3>
+<pre class="language-js"><code class="language-js"><span class="token keyword">let</span> count <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+count <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Above we declare a variable called <code>count</code> and initialize its value to <code>1</code>. Next we assign the value <code>2</code> to the variable. </p>
+<p>With most primitive values, the variable points to a particular space in memory, or memory location, where the value of the variable is stored.</p>
+<h3 id="working-with-objects-and-non-mutating-operations">Working with Objects and non-mutating operations<a aria-hidden="true" class="anchor-heading icon-link" href="#working-with-objects-and-non-mutating-operations"></a></h3>
+<pre class="language-js"><code class="language-js"><span class="token keyword">let</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">a</span><span class="token operator">:</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+obj <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">b</span><span class="token operator">:</span> <span class="token number">2</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Above we declare an object with the variable name <code>obj</code> and assign it the key-value pair of <code>a: 1</code>. Next we assign another key-value pair to the same <code>obj</code> variable. The object contains a new key-value pairs but the memory location of the object is unchanged.
+<img src="/JS109_assessment/assets/images/Screenshot%20from%202023-03-06%2011-22-48.png" alt="Object stored in memory"></p>
+<p>Object variables point to memory locations that then point to the stored the stored values. In other words, the variables point to memory references, not the to the actual values being stored.</p>
+<hr>
+<strong>Children</strong>
+<ol>
+<li><a href="/JS109_assessment/notes/ht2dmx6iasfusag3xkag1nx">Constants</a></li>
+<li><a href="/JS109_assessment/notes/pa29y7rf0tepy1o3gvbdtij">Declaring and assigning variables</a></li>
+<li><a href="/JS109_assessment/notes/ns9d3wjcc122f106hw5lwtl">Pass by reference vs pass by value</a></li>
+<li><a href="/JS109_assessment/notes/bwqhdi1jid9jlk5o6gbyafb">Reassignment and mutation</a></li>
+<li><a href="/JS109_assessment/notes/7sv6nsm7mek2rulnozsg5ba">Scope</a></li>
+</ol>

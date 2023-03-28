@@ -1,0 +1,589 @@
+{
+  "roots": [
+    {
+      "key": "4ap1j0kdhfd938d6omjnrby",
+      "title": "JavaScript",
+      "icon": null,
+      "hasTitleNumberOutlined": false,
+      "vaultName": "JS109_assessment",
+      "children": [
+        {
+          "key": "tldfi2vg3jdn9sqbxit7suk",
+          "title": "Call Stack",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "JS109_assessment",
+          "children": []
+        },
+        {
+          "key": "r5xdkanjp8myc7euvod3v1c",
+          "title": "Coercion",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "JS109_assessment",
+          "children": []
+        },
+        {
+          "key": "9xur91vvv3l9nb6zciosjqa",
+          "title": "Constants",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "JS109_assessment",
+          "children": []
+        },
+        {
+          "key": "q3xjsxy4lhne08e06a8qwyh",
+          "title": "Data structures",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "JS109_assessment",
+          "children": [
+            {
+              "key": "b2fbgyy39kk05enfzoipron",
+              "title": "Arrays",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "JS109_assessment",
+              "children": []
+            },
+            {
+              "key": "xfj1cw13flf2irwhxy4kz97",
+              "title": "Objects",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "JS109_assessment",
+              "children": []
+            },
+            {
+              "key": "f5sjjju40a3l4qie1r0yt2n",
+              "title": "Objects vs Primitive Values",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "JS109_assessment",
+              "children": []
+            }
+          ]
+        },
+        {
+          "key": "jt34t1o0ubmypsvupcjomky",
+          "title": "Data_types",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "JS109_assessment",
+          "children": [
+            {
+              "key": "5esotasc53rum21npbwo348",
+              "title": "Booleans",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "JS109_assessment",
+              "children": []
+            },
+            {
+              "key": "rt8fi6eiwyfcyz1zlzpi09s",
+              "title": "Null",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "JS109_assessment",
+              "children": []
+            },
+            {
+              "key": "0pyx251ot811opfzlhh21il",
+              "title": "Numbers",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "JS109_assessment",
+              "children": [
+                {
+                  "key": "b42gpdd9h3xmkz3nkhhl11m",
+                  "title": "NaN",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "JS109_assessment",
+                  "children": []
+                },
+                {
+                  "key": "mj9tglhr5768l9tc6e2a5en",
+                  "title": "Infinity",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "JS109_assessment",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "key": "948qfn7wkjnba63pthq1jio",
+              "title": "Properties",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "JS109_assessment",
+              "children": []
+            },
+            {
+              "key": "gqg8ecymgmy4mk7xo67qscg",
+              "title": "Strings",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "JS109_assessment",
+              "children": [
+                {
+                  "key": "ubcl9x4i4sjldip6ga7la4r",
+                  "title": "Concatenation",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "JS109_assessment",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "key": "5skg0v7cisye4d9ntvrceif",
+              "title": "Typeof",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "JS109_assessment",
+              "children": []
+            },
+            {
+              "key": "lyr8uvtz2ffo88k4fe8bq0o",
+              "title": "Undefined",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "JS109_assessment",
+              "children": []
+            }
+          ]
+        },
+        {
+          "key": "s208owcsg4kesiv0wv9t6o1",
+          "title": "Dates",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "JS109_assessment",
+          "children": []
+        },
+        {
+          "key": "ytpyvhsv90vjj9j627jhvbi",
+          "title": "Exceptions",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "JS109_assessment",
+          "children": []
+        },
+        {
+          "key": "r1udj79y644y81j4a5a6lk7",
+          "title": "Expressions",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "JS109_assessment",
+          "children": []
+        },
+        {
+          "key": "ra0p20kuodsnuloxagh1cke",
+          "title": "Flow control",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "JS109_assessment",
+          "children": []
+        },
+        {
+          "key": "mdy04wr8e2d19zfwp01y27n",
+          "title": "Functions",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "JS109_assessment",
+          "children": []
+        },
+        {
+          "key": "20gkaimzxfkx7m9sf2601rz",
+          "title": "Input / Output",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "JS109_assessment",
+          "children": []
+        },
+        {
+          "key": "1ee9kds01i6638da5ub39z2",
+          "title": "Loops and Iterating",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "JS109_assessment",
+          "children": []
+        },
+        {
+          "key": "4rsq3w77v20guuqb6hxym12",
+          "title": "Math object",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "JS109_assessment",
+          "children": []
+        },
+        {
+          "key": "9lyni3i9dgfmj513bytdwsk",
+          "title": "Methods",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "JS109_assessment",
+          "children": [
+            {
+              "key": "kvnm1b4b3zmoguoth5z4ab2",
+              "title": "Instance_vs_static",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "JS109_assessment",
+              "children": []
+            }
+          ]
+        },
+        {
+          "key": "2mt6yqkkuwzgsvs6z1x8eig",
+          "title": "Operations",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "JS109_assessment",
+          "children": [
+            {
+              "key": "o0v5i5dzroirywxtveahr8o",
+              "title": "Equality_compariso",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "JS109_assessment",
+              "children": []
+            }
+          ]
+        },
+        {
+          "key": "6m2kleuu0xzw3rq30pteqnb",
+          "title": "Regex",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "JS109_assessment",
+          "children": []
+        },
+        {
+          "key": "b4tqj501rkrx6g2w83kmtrz",
+          "title": "Run_in_browser",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "JS109_assessment",
+          "children": []
+        },
+        {
+          "key": "u3famsu2q5l9kdczj7565na",
+          "title": "Runtime",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "JS109_assessment",
+          "children": []
+        },
+        {
+          "key": "t3vdd0hp7kxqfbj7xukka1s",
+          "title": "Side effects",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "JS109_assessment",
+          "children": []
+        },
+        {
+          "key": "1oeek08u23p8dd8mrhud6l6",
+          "title": "Statements",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "JS109_assessment",
+          "children": []
+        },
+        {
+          "key": "zb6vb9hi89482ob4pfxzw6e",
+          "title": "Style",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "JS109_assessment",
+          "children": []
+        },
+        {
+          "key": "0m6wvk9qd52ss46rxaeguta",
+          "title": "Variables",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "JS109_assessment",
+          "children": [
+            {
+              "key": "ht2dmx6iasfusag3xkag1nx",
+              "title": "Constants",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "JS109_assessment",
+              "children": []
+            },
+            {
+              "key": "pa29y7rf0tepy1o3gvbdtij",
+              "title": "Declaring and assigning variables",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "JS109_assessment",
+              "children": []
+            },
+            {
+              "key": "ns9d3wjcc122f106hw5lwtl",
+              "title": "Pass by reference vs pass by value",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "JS109_assessment",
+              "children": []
+            },
+            {
+              "key": "bwqhdi1jid9jlk5o6gbyafb",
+              "title": "Reassignment and mutation",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "JS109_assessment",
+              "children": []
+            },
+            {
+              "key": "7sv6nsm7mek2rulnozsg5ba",
+              "title": "Scope",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "JS109_assessment",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "tm0bc08i4v42pdt22jlk12x",
+      "title": "Nodejs",
+      "icon": null,
+      "hasTitleNumberOutlined": false,
+      "vaultName": "JS109_assessment",
+      "children": [
+        {
+          "key": "osbpjvxvega8zzg2m57qrrq",
+          "title": "NPM",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "JS109_assessment",
+          "children": []
+        },
+        {
+          "key": "soxp77a74wz2w5llhzj67lz",
+          "title": "Repl",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "JS109_assessment",
+          "children": []
+        },
+        {
+          "key": "pvtw6scu2rgdw8aya6gfg1p",
+          "title": "Run",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "JS109_assessment",
+          "children": []
+        },
+        {
+          "key": "u47czhwxtwthrxryl5a4dt9",
+          "title": "Runtime",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "JS109_assessment",
+          "children": []
+        },
+        {
+          "key": "f6tpx5lse2v54m1qhznsezy",
+          "title": "Version",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "JS109_assessment",
+          "children": []
+        }
+      ]
+    },
+    {
+      "key": "t738a2kyb95p21k0b1ayd9f",
+      "title": "Terminal",
+      "icon": null,
+      "hasTitleNumberOutlined": false,
+      "vaultName": "JS109_assessment",
+      "children": [
+        {
+          "key": "n43xzc1e72z7vjkmhsv1sub",
+          "title": "Terminal Commands",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "JS109_assessment",
+          "children": [
+            {
+              "key": "k4vtepoaf4y8y6n42g0c4s0",
+              "title": "Delete a file",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "JS109_assessment",
+              "children": []
+            },
+            {
+              "key": "t9791cei1sziumes1d4684n",
+              "title": "Delete a folder",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "JS109_assessment",
+              "children": []
+            },
+            {
+              "key": "n0nalpzfid2f1zgl22dwdno",
+              "title": "Navigate to folder",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "JS109_assessment",
+              "children": []
+            },
+            {
+              "key": "3xz5elp8sgyakl69hywzwj1",
+              "title": "Navigate up one folder",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "JS109_assessment",
+              "children": []
+            },
+            {
+              "key": "6msr6413yqn20riy8lsera7",
+              "title": "Create new file",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "JS109_assessment",
+              "children": []
+            },
+            {
+              "key": "4xr59ld79cdhm56h30z08n5",
+              "title": "Create New Folder",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "JS109_assessment",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "child2parent": {
+    "4ap1j0kdhfd938d6omjnrby": null,
+    "tldfi2vg3jdn9sqbxit7suk": "4ap1j0kdhfd938d6omjnrby",
+    "r5xdkanjp8myc7euvod3v1c": "4ap1j0kdhfd938d6omjnrby",
+    "9xur91vvv3l9nb6zciosjqa": "4ap1j0kdhfd938d6omjnrby",
+    "q3xjsxy4lhne08e06a8qwyh": "4ap1j0kdhfd938d6omjnrby",
+    "b2fbgyy39kk05enfzoipron": "q3xjsxy4lhne08e06a8qwyh",
+    "xfj1cw13flf2irwhxy4kz97": "q3xjsxy4lhne08e06a8qwyh",
+    "f5sjjju40a3l4qie1r0yt2n": "q3xjsxy4lhne08e06a8qwyh",
+    "jt34t1o0ubmypsvupcjomky": "4ap1j0kdhfd938d6omjnrby",
+    "5esotasc53rum21npbwo348": "jt34t1o0ubmypsvupcjomky",
+    "rt8fi6eiwyfcyz1zlzpi09s": "jt34t1o0ubmypsvupcjomky",
+    "0pyx251ot811opfzlhh21il": "jt34t1o0ubmypsvupcjomky",
+    "b42gpdd9h3xmkz3nkhhl11m": "0pyx251ot811opfzlhh21il",
+    "mj9tglhr5768l9tc6e2a5en": "0pyx251ot811opfzlhh21il",
+    "948qfn7wkjnba63pthq1jio": "jt34t1o0ubmypsvupcjomky",
+    "gqg8ecymgmy4mk7xo67qscg": "jt34t1o0ubmypsvupcjomky",
+    "ubcl9x4i4sjldip6ga7la4r": "gqg8ecymgmy4mk7xo67qscg",
+    "5skg0v7cisye4d9ntvrceif": "jt34t1o0ubmypsvupcjomky",
+    "lyr8uvtz2ffo88k4fe8bq0o": "jt34t1o0ubmypsvupcjomky",
+    "s208owcsg4kesiv0wv9t6o1": "4ap1j0kdhfd938d6omjnrby",
+    "ytpyvhsv90vjj9j627jhvbi": "4ap1j0kdhfd938d6omjnrby",
+    "r1udj79y644y81j4a5a6lk7": "4ap1j0kdhfd938d6omjnrby",
+    "ra0p20kuodsnuloxagh1cke": "4ap1j0kdhfd938d6omjnrby",
+    "mdy04wr8e2d19zfwp01y27n": "4ap1j0kdhfd938d6omjnrby",
+    "20gkaimzxfkx7m9sf2601rz": "4ap1j0kdhfd938d6omjnrby",
+    "1ee9kds01i6638da5ub39z2": "4ap1j0kdhfd938d6omjnrby",
+    "4rsq3w77v20guuqb6hxym12": "4ap1j0kdhfd938d6omjnrby",
+    "9lyni3i9dgfmj513bytdwsk": "4ap1j0kdhfd938d6omjnrby",
+    "kvnm1b4b3zmoguoth5z4ab2": "9lyni3i9dgfmj513bytdwsk",
+    "2mt6yqkkuwzgsvs6z1x8eig": "4ap1j0kdhfd938d6omjnrby",
+    "o0v5i5dzroirywxtveahr8o": "2mt6yqkkuwzgsvs6z1x8eig",
+    "6m2kleuu0xzw3rq30pteqnb": "4ap1j0kdhfd938d6omjnrby",
+    "b4tqj501rkrx6g2w83kmtrz": "4ap1j0kdhfd938d6omjnrby",
+    "u3famsu2q5l9kdczj7565na": "4ap1j0kdhfd938d6omjnrby",
+    "t3vdd0hp7kxqfbj7xukka1s": "4ap1j0kdhfd938d6omjnrby",
+    "1oeek08u23p8dd8mrhud6l6": "4ap1j0kdhfd938d6omjnrby",
+    "zb6vb9hi89482ob4pfxzw6e": "4ap1j0kdhfd938d6omjnrby",
+    "0m6wvk9qd52ss46rxaeguta": "4ap1j0kdhfd938d6omjnrby",
+    "ht2dmx6iasfusag3xkag1nx": "0m6wvk9qd52ss46rxaeguta",
+    "pa29y7rf0tepy1o3gvbdtij": "0m6wvk9qd52ss46rxaeguta",
+    "ns9d3wjcc122f106hw5lwtl": "0m6wvk9qd52ss46rxaeguta",
+    "bwqhdi1jid9jlk5o6gbyafb": "0m6wvk9qd52ss46rxaeguta",
+    "7sv6nsm7mek2rulnozsg5ba": "0m6wvk9qd52ss46rxaeguta",
+    "tm0bc08i4v42pdt22jlk12x": null,
+    "osbpjvxvega8zzg2m57qrrq": "tm0bc08i4v42pdt22jlk12x",
+    "soxp77a74wz2w5llhzj67lz": "tm0bc08i4v42pdt22jlk12x",
+    "pvtw6scu2rgdw8aya6gfg1p": "tm0bc08i4v42pdt22jlk12x",
+    "u47czhwxtwthrxryl5a4dt9": "tm0bc08i4v42pdt22jlk12x",
+    "f6tpx5lse2v54m1qhznsezy": "tm0bc08i4v42pdt22jlk12x",
+    "t738a2kyb95p21k0b1ayd9f": null,
+    "n43xzc1e72z7vjkmhsv1sub": "t738a2kyb95p21k0b1ayd9f",
+    "k4vtepoaf4y8y6n42g0c4s0": "n43xzc1e72z7vjkmhsv1sub",
+    "t9791cei1sziumes1d4684n": "n43xzc1e72z7vjkmhsv1sub",
+    "n0nalpzfid2f1zgl22dwdno": "n43xzc1e72z7vjkmhsv1sub",
+    "3xz5elp8sgyakl69hywzwj1": "n43xzc1e72z7vjkmhsv1sub",
+    "6msr6413yqn20riy8lsera7": "n43xzc1e72z7vjkmhsv1sub",
+    "4xr59ld79cdhm56h30z08n5": "n43xzc1e72z7vjkmhsv1sub"
+  },
+  "notesLabelById": {
+    "4ap1j0kdhfd938d6omjnrby": "JavaScript",
+    "tldfi2vg3jdn9sqbxit7suk": "Call Stack",
+    "r5xdkanjp8myc7euvod3v1c": "Coercion",
+    "9xur91vvv3l9nb6zciosjqa": "Constants",
+    "q3xjsxy4lhne08e06a8qwyh": "Data structures",
+    "b2fbgyy39kk05enfzoipron": "Arrays",
+    "xfj1cw13flf2irwhxy4kz97": "Objects",
+    "f5sjjju40a3l4qie1r0yt2n": "Objects vs Primitive Values",
+    "jt34t1o0ubmypsvupcjomky": "Data_types",
+    "5esotasc53rum21npbwo348": "Booleans",
+    "rt8fi6eiwyfcyz1zlzpi09s": "Null",
+    "0pyx251ot811opfzlhh21il": "Numbers",
+    "b42gpdd9h3xmkz3nkhhl11m": "NaN",
+    "mj9tglhr5768l9tc6e2a5en": "Infinity",
+    "948qfn7wkjnba63pthq1jio": "Properties",
+    "gqg8ecymgmy4mk7xo67qscg": "Strings",
+    "ubcl9x4i4sjldip6ga7la4r": "Concatenation",
+    "5skg0v7cisye4d9ntvrceif": "Typeof",
+    "lyr8uvtz2ffo88k4fe8bq0o": "Undefined",
+    "s208owcsg4kesiv0wv9t6o1": "Dates",
+    "ytpyvhsv90vjj9j627jhvbi": "Exceptions",
+    "r1udj79y644y81j4a5a6lk7": "Expressions",
+    "ra0p20kuodsnuloxagh1cke": "Flow control",
+    "mdy04wr8e2d19zfwp01y27n": "Functions",
+    "20gkaimzxfkx7m9sf2601rz": "Input / Output",
+    "1ee9kds01i6638da5ub39z2": "Loops and Iterating",
+    "4rsq3w77v20guuqb6hxym12": "Math object",
+    "9lyni3i9dgfmj513bytdwsk": "Methods",
+    "kvnm1b4b3zmoguoth5z4ab2": "Instance_vs_static",
+    "2mt6yqkkuwzgsvs6z1x8eig": "Operations",
+    "o0v5i5dzroirywxtveahr8o": "Equality_compariso",
+    "6m2kleuu0xzw3rq30pteqnb": "Regex",
+    "b4tqj501rkrx6g2w83kmtrz": "Run_in_browser",
+    "u3famsu2q5l9kdczj7565na": "Runtime",
+    "t3vdd0hp7kxqfbj7xukka1s": "Side effects",
+    "1oeek08u23p8dd8mrhud6l6": "Statements",
+    "zb6vb9hi89482ob4pfxzw6e": "Style",
+    "0m6wvk9qd52ss46rxaeguta": "Variables",
+    "ht2dmx6iasfusag3xkag1nx": "Constants",
+    "pa29y7rf0tepy1o3gvbdtij": "Declaring and assigning variables",
+    "ns9d3wjcc122f106hw5lwtl": "Pass by reference vs pass by value",
+    "bwqhdi1jid9jlk5o6gbyafb": "Reassignment and mutation",
+    "7sv6nsm7mek2rulnozsg5ba": "Scope",
+    "tm0bc08i4v42pdt22jlk12x": "Nodejs",
+    "osbpjvxvega8zzg2m57qrrq": "NPM",
+    "soxp77a74wz2w5llhzj67lz": "Repl",
+    "pvtw6scu2rgdw8aya6gfg1p": "Run",
+    "u47czhwxtwthrxryl5a4dt9": "Runtime",
+    "f6tpx5lse2v54m1qhznsezy": "Version",
+    "t738a2kyb95p21k0b1ayd9f": "Terminal",
+    "n43xzc1e72z7vjkmhsv1sub": "Terminal Commands",
+    "k4vtepoaf4y8y6n42g0c4s0": "Delete a file",
+    "t9791cei1sziumes1d4684n": "Delete a folder",
+    "n0nalpzfid2f1zgl22dwdno": "Navigate to folder",
+    "3xz5elp8sgyakl69hywzwj1": "Navigate up one folder",
+    "6msr6413yqn20riy8lsera7": "Create new file",
+    "4xr59ld79cdhm56h30z08n5": "Create New Folder"
+  }
+}
